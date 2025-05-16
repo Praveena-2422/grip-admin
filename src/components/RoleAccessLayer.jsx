@@ -95,11 +95,11 @@ const RoleAccessLayer = () => {
                       className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
                     >
                            <Link
-                                        to="/member-list"
+                                        to="/chapter-view"
                                         className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                                     >
                                        <Icon
-                        icon="majesticons:user"
+                        icon="majesticons:eye"
                         className="icon text-xl"
                       />
 
@@ -161,11 +161,11 @@ const RoleAccessLayer = () => {
                       className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
                     >
                            <Link
-                                        to="/member-list"
+                                        to="/chapter-view"
                                         className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                                     >
                                        <Icon
-                        icon="majesticons:user"
+                        icon="majesticons:eye"
                         className="icon text-xl"
                       />
 
@@ -227,11 +227,11 @@ const RoleAccessLayer = () => {
                       className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
                     >
                            <Link
-                                        to="/member-list"
+                                        to="/chapter-view"
                                         className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                                     >
                                        <Icon
-                        icon="majesticons:user"
+                        icon="majesticons:eye"
                         className="icon text-xl"
                       />
 
@@ -293,11 +293,11 @@ const RoleAccessLayer = () => {
                       className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
                     >
                            <Link
-                                        to="/member-list"
+                                        to="/chapter-view"
                                         className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                                     >
                                        <Icon
-                        icon="majesticons:user"
+                        icon="majesticons:eye"
                         className="icon text-xl"
                       />
 
@@ -361,11 +361,11 @@ const RoleAccessLayer = () => {
                       className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
                     >
                            <Link
-                                        to="/member-list"
+                                        to="/chapter-view"
                                         className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                                     >
                                        <Icon
-                        icon="majesticons:user"
+                        icon="majesticons:eye"
                         className="icon text-xl"
                       />
 
@@ -429,11 +429,11 @@ const RoleAccessLayer = () => {
                       className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
                     >
                            <Link
-                                        to="/member-list"
+                                        to="/chapter-view"
                                         className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                                     >
                                        <Icon
-                        icon="majesticons:user"
+                        icon="majesticons:eye"
                         className="icon text-xl"
                       />
 

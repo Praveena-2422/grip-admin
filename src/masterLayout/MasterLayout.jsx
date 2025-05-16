@@ -257,7 +257,7 @@ const MasterLayout = ({ children }) => {
 
                        <li>
                   <NavLink
-                    to='/'
+                    to='/referral'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -272,21 +272,21 @@ const MasterLayout = ({ children }) => {
 
                        <li>
                   <NavLink
-                    to='/'
+                    to='/thankyou'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
 <Icon icon="mdi:hand-heart-outline" className="menu-icon" />
 
-             Thank you Note  list
+             Thank you Slip List
                   </NavLink>
                 </li>
 
 
                           <li>
                   <NavLink
-                    to='/'
+                   to='/testimoniall'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -301,7 +301,7 @@ const MasterLayout = ({ children }) => {
 
                           <li>
                   <NavLink
-                    to='/'
+                     to='/visitors'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -319,7 +319,7 @@ const MasterLayout = ({ children }) => {
 
                        <li>
                   <NavLink
-                    to='/'
+                     to='/powerdate'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -370,7 +370,7 @@ const MasterLayout = ({ children }) => {
                 </li>
                 <li>
                   <NavLink
-                    to='/users-grid'
+                     to='/profile'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }

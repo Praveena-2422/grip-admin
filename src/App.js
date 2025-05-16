@@ -105,6 +105,7 @@ import AddPrimaryMemberPage from "./pages/AddPrimaryMemberPage";
 import ChapterwisePage from "./pages/ChapterwisePage";
 import OnetoOnePage from "./pages/OnetoOnePage";
 import ChapterOnePage from "./pages/chapterOnePage";
+import ChapterViewPage from "./pages/ChapterViewPage";
 
 function App() {
   return (
@@ -127,6 +128,8 @@ function App() {
          <Route exact path='/add-primarymember' element={<AddPrimaryMemberPage />} />
 
           <Route exact path='/chapterwise' element={<ChapterwisePage />} />
+
+          <Route exact path='/chapter-view' element={<ChapterViewPage />} />
 
            <Route exact path='/121-list' element={<OnetoOnePage />} />
 

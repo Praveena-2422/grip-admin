@@ -15805,3 +15805,13 @@ button.btn.btn-success.grip {
     background: #c02221;
     border: 1px solid #c02221;
 }
+
+
+.col-lg-2.col-sm-6.colchange {
+    width: 20%;}
+
+
+    @media (max-width: 768px) {
+ .col-lg-2.col-sm-6.colchange {
+    width: 50%;}
+}

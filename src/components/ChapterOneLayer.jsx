@@ -68,13 +68,13 @@ const UsersListLayer = () => {
                         <option value="Inactive">Inactive</option>
                     </select>
                 </div>
-                <Link
+                {/* <Link
                     to="/add-user"
                     className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
                 >
                     <Icon icon="ic:baseline-plus" className="icon text-xl line-height-1" />
                     Add New User
-                </Link>
+                </Link> */}
             </div>
             <div className="card-body p-24">
                 <div className="table-responsive scroll-sm">
@@ -82,7 +82,7 @@ const UsersListLayer = () => {
                         <thead>
                             <tr>
                                 <th>S.No</th>
-                              
+
                                 <th>From</th>
                                 <th>To</th>
                                 <th>Where</th>
