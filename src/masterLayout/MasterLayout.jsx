@@ -129,7 +129,7 @@ const MasterLayout = ({ children }) => {
 
             <li>
               <NavLink
-                to='/'
+                to='/dashboard'
                 className={(navData) => (navData.isActive ? "active-page" : "")}
               >
                   <Icon
@@ -171,7 +171,7 @@ const MasterLayout = ({ children }) => {
                     }
                   >
 <Icon icon='mdi:account-group-outline' className='menu-icon' />
-                     Primary Members
+                    Panel Associate
                   </NavLink>
                 </li>
                 <li>

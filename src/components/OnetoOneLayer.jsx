@@ -63,10 +63,10 @@ const OnetoOneLayer = () => {
                     <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
                         <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Aram </h6>
                          <Link
-                            to="#"
+                            to="/chapterone-list"
                             className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
                         >
-                            View All
+                            80
                             <Icon
                                 icon="solar:alt-arrow-right-linear"
                                 className="icon"
@@ -182,10 +182,10 @@ const OnetoOneLayer = () => {
                     <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
                         <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Virutcham </h6>
                        <Link
-                            to="#"
+                            to="/chapterone-list"
                             className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
                         >
-                            View All
+                           75
                             <Icon
                                 icon="solar:alt-arrow-right-linear"
                                 className="icon"
@@ -301,10 +301,10 @@ const OnetoOneLayer = () => {
                     <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
                         <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Madhuram </h6>
                         <Link
-                            to="#"
+                            to="/chapterone-list"
                             className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
                         >
-                            View All
+                           60
                             <Icon
                                 icon="solar:alt-arrow-right-linear"
                                 className="icon"
@@ -419,10 +419,10 @@ const OnetoOneLayer = () => {
                     <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
                         <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Kireedam </h6>
                         <Link
-                            to="#"
+                            to="/chapterone-list"
                             className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
                         >
-                            View All
+                            90
                             <Icon
                                 icon="solar:alt-arrow-right-linear"
                                 className="icon"
@@ -537,10 +537,10 @@ const OnetoOneLayer = () => {
                     <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
                         <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Amudham</h6>
                         <Link
-                            to="#"
+                            to="/chapterone-list"
                             className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
                         >
-                            View All
+                            70
                             <Icon
                                 icon="solar:alt-arrow-right-linear"
                                 className="icon"

@@ -55,7 +55,7 @@ const LatestAppointmentsOne = () => {
                   <td>Photographer</td>
                   <td>K7 Studios</td>
                   <td>
-                  GRIP Madhuram (Thursday
+                  GRIP Madhuram (Thursday)
                   </td>
                 </tr>
                 <tr>
@@ -67,7 +67,7 @@ const LatestAppointmentsOne = () => {
                     <span className='bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm'>
                       Completed
                     </span> */}
-                    Chapter - 3
+                   GRIP Virutcham (Wednesday)
                   </td>
                 </tr>
 

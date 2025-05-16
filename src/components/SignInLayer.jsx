@@ -72,7 +72,7 @@ const SignInLayer = () => {
               className='btn btn-primary grip text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32'
             >
               {" "}
-             <Link to='/' className=' fw-semibold'>
+             <Link to='/dashboard' className=' fw-semibold'>
                   Sign In
                 </Link>
             </button>

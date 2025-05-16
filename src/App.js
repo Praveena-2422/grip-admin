@@ -104,6 +104,7 @@ import PrimaryMemberListPage from "./pages/PrimaryMemberListPage";
 import AddPrimaryMemberPage from "./pages/AddPrimaryMemberPage";
 import ChapterwisePage from "./pages/ChapterwisePage";
 import OnetoOnePage from "./pages/OnetoOnePage";
+import ChapterOnePage from "./pages/chapterOnePage";
 
 function App() {
   return (
@@ -117,7 +118,7 @@ function App() {
         <Route exact path='/index-5' element={<HomePageFive />} />
         <Route exact path='/index-6' element={<HomePageSix />} />
         <Route exact path='/index-7' element={<HomePageSeven />} />
-        <Route exact path='/' element={<HomePageEight />} />
+        <Route exact path='/dashboard' element={<HomePageEight />} />
         <Route exact path='/index-9' element={<HomePageNine />} />
         <Route exact path='/index-10' element={<HomePageTen />} />
         <Route exact path='/index-11' element={<HomePageEleven />} />
@@ -128,6 +129,8 @@ function App() {
           <Route exact path='/chapterwise' element={<ChapterwisePage />} />
 
            <Route exact path='/121-list' element={<OnetoOnePage />} />
+
+            <Route exact path='/chapterone-list' element={<ChapterOnePage />} />
 
 
          <Route exact path='/member-list' element={<MemberListPage />} />
@@ -215,7 +218,7 @@ function App() {
         <Route exact path='/progress' element={<ProgressPage />} />
         <Route exact path='/radio' element={<RadioPage />} />
         <Route exact path='/chapter' element={<RoleAccessPage />} />
-        <Route exact path='/sign-in' element={<SignInPage />} />
+        <Route exact path='/' element={<SignInPage />} />
         <Route exact path='/sign-up' element={<SignUpPage />} />
            <Route exact path='/membership-application' element={<MembershipPage />} />
         <Route exact path='/star-rating' element={<StarRatingPage />} />
