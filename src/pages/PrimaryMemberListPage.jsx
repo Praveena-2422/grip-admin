@@ -13,7 +13,7 @@ const PrimaryMemberListPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        {/* <Breadcrumb title="Users Grid" /> */}
+         <Breadcrumb title="Panel Associate" name="User Management" />
 
         {/* UsersListLayer */}
         <PrimaryMemberListLayer/>

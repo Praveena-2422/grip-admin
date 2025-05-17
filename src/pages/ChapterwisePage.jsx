@@ -11,7 +11,7 @@ const ChapterwisePage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        {/* <Breadcrumb title="Chapter" /> */}
+         <Breadcrumb title="Chapter Wise" name="Performance" />
 
         {/* RoleAccessLayer */}
         <ChapterWiseLayer />

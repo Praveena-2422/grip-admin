@@ -11,7 +11,7 @@ const RoleAccessPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        {/* <Breadcrumb title="Chapter" /> */}
+     <Breadcrumb title="Chapter List" name="Chapters" />
 
         {/* RoleAccessLayer */}
         <RoleAccessLayer />
