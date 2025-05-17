@@ -106,6 +106,11 @@ import ChapterwisePage from "./pages/ChapterwisePage";
 import OnetoOnePage from "./pages/OnetoOnePage";
 import ChapterOnePage from "./pages/chapterOnePage";
 import ChapterViewPage from "./pages/ChapterViewPage";
+import ReferralListPage from "./pages/ReferralListPage";
+import VisitorsListPage from "./pages/VisitorsListPage";
+import PowerDatePage from "./pages/PowerDatePage";
+import ThankyouNotePage from "./pages/ThankyouNotePage";
+import TestimonialPage from "./pages/TestimonialPage";
 
 function App() {
   return (
@@ -131,9 +136,24 @@ function App() {
 
           <Route exact path='/chapter-view' element={<ChapterViewPage />} />
 
+
+          <Route exact path='/referral-list' element={<ReferralListPage />} />
+
+
+           <Route exact path='/visitors-list' element={<VisitorsListPage />} />
+
+            <Route exact path='/powerdate' element={<PowerDatePage />} />
+
+<Route exact path='/members-grid' element={<UsersGridPage />} />
+
+<Route exact path='/thankyou-slip' element={<ThankyouNotePage />} />
+
            <Route exact path='/121-list' element={<OnetoOnePage />} />
 
             <Route exact path='/chapterone-list' element={<ChapterOnePage />} />
+
+
+              <Route exact path='/testimonial-list' element={<TestimonialPage />} />
 
 
          <Route exact path='/member-list' element={<MemberListPage />} />
@@ -241,7 +261,7 @@ function App() {
         <Route exact path='/theme' element={<ThemePage />} />
         <Route exact path='/tooltip' element={<TooltipPage />} />
         <Route exact path='/typography' element={<TypographyPage />} />
-        <Route exact path='/users-grid' element={<UsersGridPage />} />
+
         <Route exact path='/users-list' element={<UsersListPage />} />
         <Route exact path='/view-details' element={<ViewDetailsPage />} />
         <Route exact path='/video-generator' element={<VideoGeneratorPage />} />

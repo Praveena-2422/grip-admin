@@ -54,7 +54,7 @@ const MemberListLayer = () => {
     setResetStep(4);
     setTimeout(() => {
       setResetStep(0);
-      navigate('/sign-in');
+      navigate('/');
     }, 3000);
   };
 
@@ -309,7 +309,7 @@ const MemberListLayer = () => {
                 className="form-control mb-3 mx-auto shadow-sm border border-secondary rounded"
                 style={{ maxWidth: '300px' }}
                 placeholder="User Name"
-                value="Rajesh"
+                value="Anbu"
                 readOnly
               />
               <input

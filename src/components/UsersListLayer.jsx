@@ -59,13 +59,7 @@ const UsersListLayer = () => {
                         />
                         <Icon icon="ion:search-outline" className="icon" />
                     </form>
-                    <select className="form-select form-select-sm w-auto ps-12 py-6 radius-12 h-40-px" defaultValue="Select Status">
-                        <option value="Select Status" disabled>
-                            Select Status
-                        </option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                    </select>
+             
                 </div>
                 <Link
                     to="/add-user"

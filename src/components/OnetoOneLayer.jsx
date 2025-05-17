@@ -3,660 +3,130 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const OnetoOneLayer = () => {
+  // Dynamic data in JSON format
+  const gripChapters = [
+    {
+      id: 1,
+      name: "GRIP Aram",
+      memberCount: 80,
+      members: [
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
+        { id: 36258, name: "Sreenath", image: "user5.png", score: 10 },
+        { id: 36259, name: "Praveen", image: "user1.png", score: 7 }
+      ]
+    },
+    {
+      id: 2,
+      name: "GRIP Virutcham",
+      memberCount: 75,
+      members: [
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
+        { id: 36258, name: "Sreenath", image: "user5.png", score: 10 },
+        { id: 36259, name: "Praveen", image: "user1.png", score: 7 }
+      ]
+    },
+    {
+      id: 3,
+      name: "GRIP Madhuram",
+      memberCount: 60,
+      members: [
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
+        { id: 36258, name: "Sreenath", image: "user5.png", score: 10 },
+        { id: 36259, name: "Praveen", image: "user1.png", score: 7 }
+      ]
+    },
+    {
+      id: 4,
+      name: "GRIP Kireedam",
+      memberCount: 90,
+      members: [
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
+        { id: 36258, name: "Sreenath", image: "user5.png", score: 10 },
+        { id: 36259, name: "Praveen", image: "user1.png", score: 7 }
+      ]
+    },
+    {
+      id: 5,
+      name: "GRIP Amudham",
+      memberCount: 70,
+      members: [
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
+        { id: 36258, name: "Sreenath", image: "user5.png", score: 10 },
+        { id: 36259, name: "Praveen", image: "user1.png", score: 7 }
+      ]
+    }
+  ];
+
   return (
     <>
       <div className="cardd h-100 p-0 radius-12">
-        {/* <div className="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
-          <div className="d-flex align-items-center flex-wrap gap-3">
-
-            <form className="navbar-search">
-              <input
-                type="text"
-                className="bg-base h-40-px w-auto"
-                name="search"
-                placeholder="Search"
-              />
-              <Icon icon="ion:search-outline" className="icon" />
-            </form>
-
-          </div>
-
-          <div className="d-flex align-items-center flex-wrap gap-1">
-
-        <button
-            type="button"
-            className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModalTwo"
-          >
-            <Icon
-              icon="ic:baseline-plus"
-              className="icon text-xl line-height-1"
-            />
-            Add Region
-          </button>
-
-
-          <button
-            type="button"
-            className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            <Icon
-              icon="ic:baseline-plus"
-              className="icon text-xl line-height-1"
-            />
-            Add New
-          </button>
-          </div>
-        </div> */}
-        <div className="card-body p-24">
-
-
+        <div className="card-body chapterwisebox p-24">
           <div className='row gy-4'>
+            {gripChapters.map((chapter) => (
+              <div className="col-xxl-4" key={chapter.id}>
+                <div className="card">
+                     <div className="chapterwiseheading d-flex align-items-center flex-wrap gap-2 justify-content-between">
+                      <h6 className="mb-2 fw-bold text-lg mb-0">{chapter.name}</h6>
+                      <Link
+                        to="/chapterone-list"
+                        className="onetoonecount text-primary-600 hover-text-primary d-flex align-items-center gap-1"
+                      >
+                        {chapter.memberCount}
+                        <Icon
+                          icon="solar:alt-arrow-right-linear"
+                          className="icon"
+                        />
+                      </Link>
+                    </div>
+                  <div className="card-body">
 
-            {/* Style Two */}
-      <div className="col-xxl-4">
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Aram </h6>
-                         <Link
-                            to="/chapterone-list"
-                            className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
+                    <div className="mt-2">
+                      {chapter.members.map((member, index) => (
+                        <div
+                          className={`d-flex align-items-center justify-content-between gap-3 ${index < chapter.members.length - 1 ? 'mb-32' : ''}`}
+                          key={member.id}
                         >
-                            80
-                            <Icon
-                                icon="solar:alt-arrow-right-linear"
-                                className="icon"
+                          <div className="d-flex align-items-center">
+                            <img
+                              src={`assets/images/users/${member.image}`}
+                              alt={member.name}
+                              className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
                             />
-                        </Link>
+                            <div className="flex-grow-1">
+                              <h6 className="text-md mb-0">{member.name}</h6>
+                              <span className="text-sm text-secondary-light fw-medium">
+                                Member ID: {member.id}
+                              </span>
+                            </div>
+                          </div>
+                          <span className="text-primary-light text-md fw-medium">{member.score}</span>
+                        </div>
+                      ))}
                     </div>
-                   <div className="mt-32">
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">ElanKathir</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">15</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user2.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kesavan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user3.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Vignesh</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">16</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user4.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kannan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user5.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Sreenath</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">10</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Praveen</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">7</span>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-            </div>
-        </div>
-
-
-         <div className="col-xxl-4">
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Virutcham </h6>
-                       <Link
-                            to="/chapterone-list"
-                            className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
-                        >
-                           75
-                            <Icon
-                                icon="solar:alt-arrow-right-linear"
-                                className="icon"
-                            />
-                        </Link>
-                    </div>
-               <div className="mt-32">
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">ElanKathir</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">15</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user2.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kesavan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user3.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Vignesh</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">16</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user4.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kannan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user5.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Sreenath</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">10</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Praveen</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">7</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-         <div className="col-xxl-4">
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Madhuram </h6>
-                        <Link
-                            to="/chapterone-list"
-                            className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
-                        >
-                           60
-                            <Icon
-                                icon="solar:alt-arrow-right-linear"
-                                className="icon"
-                            />
-                        </Link>
-                    </div>
-                   <div className="mt-32">
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">ElanKathir</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">15</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user2.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kesavan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user3.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Vignesh</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">16</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user4.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kannan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user5.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Sreenath</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">10</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Praveen</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">7</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-         <div className="col-xxl-4">
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Kireedam </h6>
-                        <Link
-                            to="/chapterone-list"
-                            className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
-                        >
-                            90
-                            <Icon
-                                icon="solar:alt-arrow-right-linear"
-                                className="icon"
-                            />
-                        </Link>
-                    </div>
-                    <div className="mt-32">
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">ElanKathir</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">15</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user2.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kesavan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user3.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Vignesh</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">16</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user4.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kannan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user5.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Sreenath</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">10</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Praveen</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">7</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className="col-xxl-4">
-            <div className="card">
-                <div className="card-body">
-                    <div className="d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                        <h6 className="mb-2 fw-bold text-lg mb-0">GRIP Amudham</h6>
-                        <Link
-                            to="/chapterone-list"
-                            className="text-primary-600 hover-text-primary d-flex align-items-center gap-1"
-                        >
-                            70
-                            <Icon
-                                icon="solar:alt-arrow-right-linear"
-                                className="icon"
-                            />
-                        </Link>
-                    </div>
-                    <div className="mt-32">
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">ElanKathir</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">15</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user2.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kesavan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user3.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Vignesh</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">16</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user4.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Kannan</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                        Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">13</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3 mb-32">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user5.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Sreenath</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">10</span>
-                        </div>
-                        <div className="d-flex align-items-center justify-content-between gap-3">
-                            <div className="d-flex align-items-center">
-                                <img
-                                    src="assets/images/users/user1.png"
-                                    alt=""
-                                    className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
-                                />
-                                <div className="flex-grow-1">
-                                    <h6 className="text-md mb-0">Praveen</h6>
-                                    <span className="text-sm text-secondary-light fw-medium">
-                                       Member ID: 36254
-                                    </span>
-                                </div>
-                            </div>
-                            <span className="text-primary-light text-md fw-medium">7</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+              </div>
+            ))}
           </div>
-
         </div>
       </div>
 
-
-
-
-        {/* Modal Start */}
+      {/* Modal Start */}
       <div
         className="modal fade"
         id="exampleModalTwo"
@@ -687,38 +157,30 @@ const OnetoOneLayer = () => {
                     <input
                       type="text"
                       className="form-control radius-8"
-
                     />
                   </div>
 
-
-                     <div className="col-12 mb-20">
+                  <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                     Date
+                      Date
                     </label>
                     <input
                       type="date"
                       className="form-control radius-8"
-
                     />
                   </div>
-
 
                   <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
                       Region Head
                     </label>
-                    <select class="form-control form-select">
-                                                   <option value="Date">Select Region Head</option>
-                                                   <option value="1" selected="">Rajesh</option>
-                                                   <option value="1" selected="">Madhu</option>
-                                                    <option value="1" selected="">Prabhu</option>
-
-                                               </select>
+                    <select className="form-control form-select">
+                      <option value="Date">Select Region Head</option>
+                      <option value="1">Rajesh</option>
+                      <option value="2">Madhu</option>
+                      <option value="3">Prabhu</option>
+                    </select>
                   </div>
-
-
-
 
                   <div className="d-flex align-items-center gap-3 mt-24">
                     <button
@@ -742,12 +204,7 @@ const OnetoOneLayer = () => {
       </div>
       {/* Modal End */}
 
-
-
-
-
-
-        {/* Modal Start */}
+      {/* Modal Start */}
       <div
         className="modal fade"
         id="exampleModalOne"
@@ -759,7 +216,7 @@ const OnetoOneLayer = () => {
           <div className="modal-content radius-16 bg-base">
             <div className="modal-header py-16 px-24 border border-top-0 border-start-0 border-end-0">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-               Edit Chapter
+                Edit Chapter
               </h1>
               <button
                 type="button"
@@ -769,55 +226,53 @@ const OnetoOneLayer = () => {
               />
             </div>
             <div className="modal-body p-24">
- <table style={{ borderCollapse: 'collapse', width: '100%' }}>
-  <tbody>
-    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-      <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-      <td style={{ padding: '8px 0' }}>
-        GRIP Aram <span className='chapterday'>(Tuesday)</span>
-      </td>
-    </tr>
-    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
-      <td style={{ padding: '8px 0' }}>Chennai</td>
-    </tr>
-    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-      <td style={{ padding: '8px 0' }}><strong>CID:</strong></td>
-      <td style={{ padding: '8px 0' }}>Richard</td>
-    </tr>
-    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-      <td style={{ padding: '8px 0' }}><strong>Location:</strong></td>
-      <td style={{ padding: '8px 0' }}>Pallavaram</td>
-    </tr>
-    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-      <td style={{ padding: '8px 0' }}><strong>Status:</strong></td>
-      <td style={{ padding: '8px 0' }}>
-        <select
-          className="form-select"
-          style={{
-            width: '150px',
-            padding: '8px 8px',
-            border: '1px solid #ccc',
-            borderRadius: '4px',
-            backgroundColor: '#fff',
-          }}
-        >
-          <option value="Active">Active</option>
-          <option value="Inactive">Inactive</option>
-          <option value="Pending">Upcoming</option>
-        </select>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+              <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+                <tbody>
+                  <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                    <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
+                    <td style={{ padding: '8px 0' }}>
+                      GRIP Aram <span className='chapterday'>(Tuesday)</span>
+                    </td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                    <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                    <td style={{ padding: '8px 0' }}>Chennai</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                    <td style={{ padding: '8px 0' }}><strong>CID:</strong></td>
+                    <td style={{ padding: '8px 0' }}>Richard</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                    <td style={{ padding: '8px 0' }}><strong>Location:</strong></td>
+                    <td style={{ padding: '8px 0' }}>Pallavaram</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                    <td style={{ padding: '8px 0' }}><strong>Status:</strong></td>
+                    <td style={{ padding: '8px 0' }}>
+                      <select
+                        className="form-select"
+                        style={{
+                          width: '150px',
+                          padding: '8px 8px',
+                          border: '1px solid #ccc',
+                          borderRadius: '4px',
+                          backgroundColor: '#fff',
+                        }}
+                      >
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                        <option value="Pending">Upcoming</option>
+                      </select>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
       {/* Modal End */}
     </>
-
   );
 };
 

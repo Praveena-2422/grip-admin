@@ -18,12 +18,12 @@ const ViewProfileLayer = () => {
             {/* Profile Photo and Basic Info */}
             <div className="text-center border border-top-0 border-start-0 border-end-0">
               <img
-                src="assets/images/user-grid/user-grid-img14.png"
+                src="assets/images/avatar/avatar1.png"
                 alt="Profile"
                 className="border br-white border-width-2-px w-200-px h-200-px rounded-circle object-fit-cover"
               />
-              <h6 className="mb-0 mt-16">Jacob Jones</h6>
-              <span className="text-secondary-light mb-16">ifrandom@gmail.com</span>
+              <h6 className="mb-0 mt-16">Jerome</h6>
+              <span className="text-secondary-light mb-16">jeromdesign@gmail.com</span>
             </div>
 
             {/* Personal Info */}
@@ -32,15 +32,15 @@ const ViewProfileLayer = () => {
               <ul>
                 <li className="d-flex align-items-center gap-1 mb-12">
                   <span className="w-30 text-md fw-semibold text-primary-light">Full Name</span>
-                  <span className="w-70 text-secondary-light fw-medium">: Will Jonto</span>
+                  <span className="w-70 text-secondary-light fw-medium">: Jerome Joseph</span>
                 </li>
                 <li className="d-flex align-items-center gap-1 mb-12">
                   <span className="w-30 text-md fw-semibold text-primary-light">Email</span>
-                  <span className="w-70 text-secondary-light fw-medium">: willjontoax@gmail.com</span>
+                  <span className="w-70 text-secondary-light fw-medium">: jeromdesign@gmail.com</span>
                 </li>
                 <li className="d-flex align-items-center gap-1 mb-12">
                   <span className="w-30 text-md fw-semibold text-primary-light">Phone Number</span>
-                  <span className="w-70 text-secondary-light fw-medium">: (1) 2536 2561 2365</span>
+                  <span className="w-70 text-secondary-light fw-medium">: 98765 09354</span>
                 </li>
                 <li className="d-flex align-items-center gap-1 mb-12">
                   <span className="w-30 text-md fw-semibold text-primary-light">Department</span>
@@ -77,17 +77,19 @@ const ViewProfileLayer = () => {
             </div>
 
             {/* Company Logo */}
-            <div className="mt-32 d-flex align-items-center gap-4">
-              <h6 className="text-xl mb-0 flex-shrink-0">Company Logo</h6>
+            <div className="mt-32 gap-4">
+              <h6 className="text-xl mb-20 flex-shrink-0">Company Logo</h6>
+              <div className="d-flex gap-4">
               <img
-                src="assets/images/user-grid/company-logo.png"
+                src="assets/images/avatar/company.png"
                 alt="Company Logo"
                 className="w-100-px h-auto object-fit-contain border radius-8"
               />
+              </div>
             </div>
 
             {/* Social Media Links */}
-            <div className="mt-32">
+            <div className="mt-32 pb-20">
               <h6 className="text-xl mb-16">Social Media Links</h6>
               <div className="d-flex gap-4">
                 <a href="https://facebook.com" target="_blank" rel="noreferrer" className="text-primary-light fs-4">
@@ -110,22 +112,22 @@ const ViewProfileLayer = () => {
               <h6 className="text-xl mb-16">Recent Clients</h6>
               <div className="d-flex gap-4 flex-wrap">
                 <img
-                  src="assets/images/user-grid/client-logo1.png"
+                  src="assets/images/avatar/dummy-client.jpg"
                   alt="Client 1"
                   className="w-80-px h-auto object-fit-contain border radius-8"
                 />
                 <img
-                  src="assets/images/user-grid/client-logo2.png"
+                  src="assets/images/avatar/dummy-cli-one.jpg"
                   alt="Client 2"
                   className="w-80-px h-auto object-fit-contain border radius-8"
                 />
                 <img
-                  src="assets/images/user-grid/client-logo3.png"
+                    src="assets/images/avatar/dummy-cli-two.jpg"
                   alt="Client 3"
                   className="w-80-px h-auto object-fit-contain border radius-8"
                 />
                 <img
-                  src="assets/images/user-grid/client-logo4.png"
+                   src="assets/images/avatar/dummy-cli-three.webp"
                   alt="Client 4"
                   className="w-80-px h-auto object-fit-contain border radius-8"
                 />

@@ -1,10 +1,10 @@
 import React from "react";
 import MasterLayout from "../masterLayout/MasterLayout";
 import Breadcrumb from "../components/Breadcrumb";
-import UsersGridLayer from "../components/UsersGridLayer";
 
+import ReferralListLayer from "../components/child/ReferralListLayer";
 
-const UsersGridPage = () => {
+const ReferralListPage = () => {
   return (
     <>
 
@@ -12,10 +12,10 @@ const UsersGridPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        <Breadcrumb title="Members Profile" name="Members" />
+          <Breadcrumb title="Referral List" name="Performance" />
 
-        {/* UsersGridLayer */}
-        <UsersGridLayer />
+        {/* RoleAccessLayer */}
+        <ReferralListLayer />
 
       </MasterLayout>
 
@@ -23,4 +23,4 @@ const UsersGridPage = () => {
   );
 };
 
-export default UsersGridPage;
+export default ReferralListPage;

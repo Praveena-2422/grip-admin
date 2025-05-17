@@ -1,10 +1,10 @@
 import React from "react";
 import MasterLayout from "../masterLayout/MasterLayout";
 import Breadcrumb from "../components/Breadcrumb";
-import UsersGridLayer from "../components/UsersGridLayer";
 
+import VisitorsListLayer from "../components/child/VisitorsListLayer";
 
-const UsersGridPage = () => {
+const VisitorsListPage = () => {
   return (
     <>
 
@@ -12,10 +12,10 @@ const UsersGridPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        <Breadcrumb title="Members Profile" name="Members" />
+        <Breadcrumb title="Visitors List" name="Performance" />
 
-        {/* UsersGridLayer */}
-        <UsersGridLayer />
+        {/* RoleAccessLayer */}
+        <VisitorsListLayer />
 
       </MasterLayout>
 
@@ -23,4 +23,4 @@ const UsersGridPage = () => {
   );
 };
 
-export default UsersGridPage;
+export default VisitorsListPage;

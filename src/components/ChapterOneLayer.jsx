@@ -5,44 +5,44 @@ import { Link } from 'react-router-dom';
 const users = [
     {
         id: 1,
-        from: 'Kathryn Murphy',
-        to: 'osgoodwy@gmail.com',
-        where: '9876543210',
-        date: 'Iriscoders',
-        discuss: 'Lorem Ipsum',
+        from: 'Elankathir',
+        to: 'Kesavan',
+        where: 'Vadapalani',
+        date: '12-05-25',
+        discuss: 'About Business Growth',
 
     },
     {
         id: 2,
-       from: 'Kathryn Murphy',
-        to: 'osgoodwy@gmail.com',
-        where: '9876543210',
-        date: 'Iriscoders',
-        discuss: 'Lorem Ipsum',
+       from: 'Aravind',
+        to: 'PanchaiNadhan',
+        where: 'Nungambakkam',
+        date: '3-05-25',
+        discuss: 'About the Business Strategies',
     },
     {
         id: 3,
-       from: 'Kathryn Murphy',
-        to: 'osgoodwy@gmail.com',
-        where: '9876543210',
-        date: 'Iriscoders',
-        discuss: 'Lorem Ipsum',
+      from: 'Elankathir',
+        to: 'Kesavan',
+        where: 'Vadapalani',
+        date: '12-05-25',
+        discuss: 'About Business Growth',
     },
     {
         id: 4,
-         from: 'Kathryn Murphy',
-        to: 'osgoodwy@gmail.com',
-        where: '9876543210',
-        date: 'Iriscoders',
-        discuss: 'Lorem Ipsum',
+      from: 'Aravind',
+        to: 'PanchaiNadhan',
+        where: 'Nungambakkam',
+        date: '3-05-25',
+        discuss: 'About the Business Strategies',
     },
     {
         id: 5,
-        from: 'Kathryn Murphy',
-        to: 'osgoodwy@gmail.com',
-        where: '9876543210',
-        date: 'Iriscoders',
-        discuss: 'Lorem Ipsum',
+        from: 'Elankathir',
+        to: 'Kesavan',
+        where: 'Vadapalani',
+        date: '12-05-25',
+        discuss: 'About Business Growth',
     },
 ];
 
@@ -60,13 +60,7 @@ const UsersListLayer = () => {
                         />
                         <Icon icon="ion:search-outline" className="icon" />
                     </form>
-                    <select className="form-select form-select-sm w-auto ps-12 py-6 radius-12 h-40-px" defaultValue="Select Status">
-                        <option value="Select Status" disabled>
-                            Select Status
-                        </option>
-                        <option value="Active">Active</option>
-                        <option value="Inactive">Inactive</option>
-                    </select>
+              
                 </div>
                 {/* <Link
                     to="/add-user"

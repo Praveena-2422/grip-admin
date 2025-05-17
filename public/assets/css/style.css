@@ -15811,7 +15811,75 @@ button.btn.btn-success.grip {
     width: 20%;}
 
 
+    .col-lg-2.col-sm-6.colchange h6 {
+    font-size: 20px !important;
+}
+
     @media (max-width: 768px) {
  .col-lg-2.col-sm-6.colchange {
     width: 50%;}
+}
+
+
+.kanban-card {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.kanban-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.min-width-300 {
+  min-width: 350px;
+}
+
+.card-body.chapterwisebox.p-24 .card {
+    background: linear-gradient(45deg, #ffeded, #0000001f);
+}
+
+
+.card-body.chapterwisebox.p-24 .chapterwiseheading {
+    background: linear-gradient(135deg, rgb(192, 34, 33), rgb(69, 68, 66));
+    padding: 20px;
+
+
+}
+
+
+.card-body.chapterwisebox.p-24 .chapterwiseheading h6 {
+
+    color: #fff !important;
+
+}
+
+
+
+.kanban-card.bg-info-focus {
+    background-color: rgb(20 75 214 / 95%) !important ;
+}
+
+
+.bg-primary.grip {
+    background-color: #000000 !important;
+}
+
+.bg-gradient-start-333 {
+    background: linear-gradient(to right, #c1222042, #ffffff);
+}
+
+
+a.onetoonecount.text-primary-600.hover-text-primary.d-flex.align-items-center.gap-1 {
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 48px;
+    padding: 7px;
+    font-weight: 600;
+}
+
+
+.chname.text-black.fw-semibold {
+    font-size: 22px;
 }

@@ -4,8 +4,38 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 // import React, { useState } from "react";
 
+import { useNavigate } from 'react-router-dom';
+
 
 const MembershipLayer = () => {
+
+    const navigate = useNavigate();
+
+    const [checkboxes, setCheckboxes] = useState({
+        check1: false,
+        check2: false,
+        check3: false,
+        check4: false,
+        check5: false,
+        check6: false,
+    });
+
+    const handleCheckboxChange = (e) => {
+        const { id, checked } = e.target;
+        setCheckboxes((prev) => ({
+            ...prev,
+            [id]: checked,
+        }));
+    };
+
+    const handleSubmit = () => {
+        if (allChecked) {
+            // ✅ Redirect to login
+            navigate('/');
+        }
+    };
+
+    const allChecked = Object.values(checkboxes).every(Boolean);
 
     const [currentStep, setCurrentStep] = useState(1);
 
@@ -464,98 +494,98 @@ const MembershipLayer = () => {
                                             </div>
 
 
-                                                <h6 className="card-title mb-0">Business References</h6>
-                                <span>   These references won't be used for promotion</span>
+                                            <h6 className="card-title mb-0">Business References</h6>
+                                            <span>   These references won't be used for promotion</span>
                                             <div className="row gy-3">
-                                                  <div className="col-4">
-                                        <label className="form-label">Ref 1: First Name   </label>
-                                        <input
-                                            type="text"
-                                            name="#0"
-                                            className="form-control"
+                                                <div className="col-4">
+                                                    <label className="form-label">Ref 1: First Name   </label>
+                                                    <input
+                                                        type="text"
+                                                        name="#0"
+                                                        className="form-control"
 
-                                        />
-                                    </div>
+                                                    />
+                                                </div>
 
-                                    <div className="col-4">
-                                        <label className="form-label">
+                                                <div className="col-4">
+                                                    <label className="form-label">
 
-                                            Ref 1: Last Name   </label>
-                                        <input
-                                            type="text"
-                                            name="#0"
-                                            className="form-control"
+                                                        Ref 1: Last Name   </label>
+                                                    <input
+                                                        type="text"
+                                                        name="#0"
+                                                        className="form-control"
 
-                                        />
-                                    </div>
-
-
-                                    <div className="col-4">
-                                        <label className="form-label">
+                                                    />
+                                                </div>
 
 
-                                            Business Name </label>
-                                        <input
-                                            type="text"
-                                            name="#0"
-                                            className="form-control"
-
-                                        />
-                                    </div>
+                                                <div className="col-4">
+                                                    <label className="form-label">
 
 
+                                                        Business Name </label>
+                                                    <input
+                                                        type="text"
+                                                        name="#0"
+                                                        className="form-control"
 
-                                    <div className="col-4">
-                                        <label className="form-label">Phone </label>
-                                        <input
-                                            type="text"
-                                            name="#0"
-                                            className="form-control"
-
-                                        />
-                                    </div>
+                                                    />
+                                                </div>
 
 
-                                    <div className="col-4">
-                                        <label className="form-label">
-                                            Email </label>
-                                        <input
-                                            type="email"
-                                            name="#0"
-                                            className="form-control"
 
-                                        />
-                                    </div>
+                                                <div className="col-4">
+                                                    <label className="form-label">Phone </label>
+                                                    <input
+                                                        type="text"
+                                                        name="#0"
+                                                        className="form-control"
+
+                                                    />
+                                                </div>
 
 
-                                    <div className="col-4 mb-20">
-                                        <label className="form-label">
-                                            Relationship </label>
-                                        <input
-                                            type="text"
-                                            name="#0"
-                                            className="form-control"
+                                                <div className="col-4">
+                                                    <label className="form-label">
+                                                        Email </label>
+                                                    <input
+                                                        type="email"
+                                                        name="#0"
+                                                        className="form-control"
 
-                                        />
-                                    </div>
+                                                    />
+                                                </div>
 
-                                    <div className="col-12 businessdetail mb-5">
 
-                                        <div class="form-check style-check d-flex align-items-center mb-10">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I have/will inform the above contacts that I’m sharing their info with GRIP.</label>
+                                                <div className="col-4 mb-20">
+                                                    <label className="form-label">
+                                                        Relationship </label>
+                                                    <input
+                                                        type="text"
+                                                        name="#0"
+                                                        className="form-control"
 
-                                        </div>
+                                                    />
+                                                </div>
 
-                                        <div class="form-check style-check d-flex align-items-center">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I have/​will inform the above contacts that I am sharing their information with GRIP for the purpose of references</label>
+                                                <div className="col-12 businessdetail mb-5">
 
-                                        </div>
+                                                    <div class="form-check style-check d-flex align-items-center mb-10">
+                                                        <input class="form-check-input" type="checkbox" id="check1" value="" />
+                                                        <label class="form-check-label" for="check1">
+                                                            I have/will inform the above contacts that I’m sharing their info with GRIP.</label>
 
-                                    </div>
+                                                    </div>
+
+                                                    <div class="form-check style-check d-flex align-items-center">
+                                                        <input class="form-check-input" type="checkbox" id="check1" value="" />
+                                                        <label class="form-check-label" for="check1">
+                                                            I have/​will inform the above contacts that I am sharing their information with GRIP for the purpose of references</label>
+
+                                                    </div>
+
+                                                </div>
 
 
 
@@ -578,73 +608,51 @@ const MembershipLayer = () => {
                                                 </div>
                                             </div>
                                         </fieldset>
-                                        <fieldset
-                                            className={`wizard-fieldset ${currentStep === 4 && "show"} `}
-                                        >
+                                        <fieldset className={`wizard-fieldset ${currentStep === 4 ? "show" : ""}`}>
+                                            <h6 className="card-title mb-0">Terms and Conditions</h6>
 
-   <h6 className="card-title mb-0"> Terms and Conditions</h6>
+                                            <div className="row gy-3 pt-3 pb-5">
+                                                <div className="col-12 pb-30">
 
-                                            <div className="row gy-3 pt-3">
-                                    <div className="col-12 pb-30">
+                                                    {/* Checkboxes */}
+                                                    {Object.entries({
+                                                        check1: "I will be able to attend our GRIP weekly meetings on time.",
+                                                        check2: "I will be able to bring visitors to this GRIP chapter meetings.",
+                                                        check3: "I will always display a positive attitude.",
+                                                        check4: "I understand that 'Contributors Win'™",
+                                                        check5: "I will abide by the policies of GRIP.",
+                                                        check6: "I will contribute to the best of my knowledge & ability.",
+                                                    }).map(([id, label]) => (
+                                                        <div className="form-check style-check d-flex align-items-center" key={id}>
+                                                            <input
+                                                                className="form-check-input"
+                                                                type="checkbox"
+                                                                id={id}
+                                                                onChange={handleCheckboxChange}
+                                                                checked={checkboxes[id]}
+                                                            />
+                                                            <label className="form-check-label" htmlFor={id}>{label}</label>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
 
-                                        <div class="form-check style-check d-flex align-items-center ">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I will be able to attend our GRIP weekly meetings on time.</label>
+                                            {/* ✅ Success Message */}
+                                            {allChecked && (
+                                                <div className='text-center mb-40'>
+                                                    <img
+                                                        src='assets/images/gif/success-img3.gif'
+                                                        alt=''
+                                                        className='gif-image mb-24'
+                                                    />
+                                                    <h6 className='text-md text-neutral-600'>Congratulations</h6>
+                                                    <p className='text-neutral-400 text-sm mb-0'>
+                                                        Well done! You have successfully completed.
+                                                    </p>
+                                                </div>
+                                            )}
 
-                                        </div>
-
-                                        <div class="form-check style-check d-flex align-items-center">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I will be able to bring visitors to this GRIP chapter meetings.</label>
-                                        </div>
-
-
-
-                                        <div class="form-check style-check d-flex align-items-center">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I will always display a positive attitude.</label>
-                                        </div>
-
-
-                                        <div class="form-check style-check d-flex align-items-center">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I understand that "Contributors Win"™</label>
-                                        </div>
-
-
-                                        <div class="form-check style-check d-flex align-items-center">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I will abide by the policies of GRIP.</label>
-                                        </div>
-
-                                        <div class="form-check style-check d-flex align-items-center">
-                                            <input class="form-check-input" type="checkbox" id="check1" value="" />
-                                            <label class="form-check-label" for="check1">
-                                                I will contribute to the best of my knowledge & ability.</label>
-                                        </div>
-
-
-
-                                    </div>
-                                    </div>
-
-
-                                            {/* <div className='text-center mb-40'>
-                                                <img
-                                                    src='assets/images/gif/success-img3.gif'
-                                                    alt=''
-                                                    className='gif-image mb-24'
-                                                />
-                                                <h6 className='text-md text-neutral-600'>Congratulations </h6>
-                                                <p className='text-neutral-400 text-sm mb-0'>
-                                                    Well done! You have successfully completed.
-                                                </p>
-                                            </div> */}
+                                            {/* ✅ Buttons */}
                                             <div className='form-group d-flex align-items-center justify-content-end mt-5 gap-8'>
                                                 <button
                                                     onClick={prevStep}
@@ -654,10 +662,12 @@ const MembershipLayer = () => {
                                                     Back
                                                 </button>
                                                 <button
+                                                    onClick={handleSubmit}
                                                     type='button'
                                                     className='form-wizard-submit btn btn-primary grip px-32'
+                                                    disabled={!allChecked}
                                                 >
-                                                    Publish
+                                                   Submit
                                                 </button>
                                             </div>
                                         </fieldset>

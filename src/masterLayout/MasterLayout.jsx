@@ -257,7 +257,7 @@ const MasterLayout = ({ children }) => {
 
                        <li>
                   <NavLink
-                    to='/referral'
+                    to='/referral-list'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -272,7 +272,7 @@ const MasterLayout = ({ children }) => {
 
                        <li>
                   <NavLink
-                    to='/thankyou'
+                    to='/thankyou-slip'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -286,7 +286,7 @@ const MasterLayout = ({ children }) => {
 
                           <li>
                   <NavLink
-                   to='/testimoniall'
+                   to='/testimonial-list'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -301,7 +301,7 @@ const MasterLayout = ({ children }) => {
 
                           <li>
                   <NavLink
-                     to='/visitors'
+                     to='/visitors-list'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -370,7 +370,7 @@ const MasterLayout = ({ children }) => {
                 </li>
                 <li>
                   <NavLink
-                     to='/profile'
+                     to='/members-grid'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
@@ -499,10 +499,10 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                              Ronald Richards
+                             Richard
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
-                              You can stitch between artboards
+                              Invite you to Chapter
                             </p>
                           </div>
                         </div>
@@ -520,10 +520,10 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                              Arlene McCoy
+                              Anbu
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
-                              Invite you to prototyping
+                              Invite you to Chapter
                             </p>
                           </div>
                         </div>
@@ -544,10 +544,10 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                              Annette Black
+                             Kesavan
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
-                              Invite you to prototyping
+                              Invite you to Chapter
                             </p>
                           </div>
                         </div>
@@ -565,10 +565,10 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                              Darlene Robertson
+                             Praveen
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
-                              Invite you to prototyping
+                               Invite you to Chapter
                             </p>
                           </div>
                         </div>
@@ -604,11 +604,9 @@ const MasterLayout = ({ children }) => {
                     <div className='py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2'>
                       <div>
                         <h6 className='text-lg text-primary-light fw-semibold mb-2'>
-                          Shaidul Islam
-                        </h6>
-                        <span className='text-secondary-light fw-medium text-sm'>
                           Admin
-                        </span>
+                        </h6>
+
                       </div>
                       <button type='button' className='hover-text-danger'>
                         <Icon
@@ -618,7 +616,7 @@ const MasterLayout = ({ children }) => {
                       </button>
                     </div>
                     <ul className='to-top-list'>
-                      <li>
+                      {/* <li>
                         <Link
                           className='dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3'
                           to='/view-profile'
@@ -653,7 +651,7 @@ const MasterLayout = ({ children }) => {
                           />
                           Setting
                         </Link>
-                      </li>
+                      </li> */}
                       <li>
                         <Link
                           className='dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3'

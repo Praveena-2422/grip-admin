@@ -79,7 +79,7 @@ const SignUpLayer = () => {
             <div className='mt-32 text-center text-sm'>
               <p className='mb-0'>
                 Already have an account?{" "}
-                <Link to='/sign-in' className='text-primary-600 fw-semibold'>
+                <Link to='/' className='text-primary-600 fw-semibold'>
                   Sign In
                 </Link>
               </p>
