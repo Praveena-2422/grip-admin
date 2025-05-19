@@ -114,6 +114,7 @@ import TestimonialPage from "./pages/TestimonialPage";
 import ReferralOverallpage from "./pages/ReferralOverallPage";
 import ThankyouOverallPage from "./pages/ThankyouOverallPage";
 import TestimonialOverallPage from "./pages/TestimonialOverallPage";
+import VisitorOverallpage from "./pages/VisitorOverallpage";
 
 function App() {
   return (
@@ -162,6 +163,8 @@ function App() {
 
 
               <Route exact path='/testimonial-list' element={<TestimonialPage />} />
+
+                 <Route exact path='/visitor' element={<VisitorOverallpage />} />
 
 
                 <Route exact path='/testimoniall' element={<TestimonialOverallPage />} />
