@@ -5,40 +5,40 @@ import { Link } from 'react-router-dom';
 const users = [
     {
         id: 1,
-        name: 'Kathryn Murphy',
-        email: 'osgoodwy@gmail.com',
+        name: 'Kesavan',
+        email: 'kesavan@gmail.com',
         phone: '9876543210',
         company: 'Iriscoders',
         status: 'Active',
     },
     {
         id: 2,
-        name: 'Annette Black',
-        email: 'redaniel@gmail.com',
+        name: 'Elankathir',
+        email: 'kathir@gmail.com',
         phone: '8907654345',
         company: 'Brandkiter',
         status: 'Inactive',
     },
     {
         id: 3,
-        name: 'Ronald Richards',
-        email: 'seannand@mail.ru',
+        name: 'Aravind',
+        email: 'aravind@mail.ru',
         phone: '7890654321',
         company: 'Topvfx',
         status: 'Active',
     },
     {
         id: 4,
-        name: 'Eleanor Pena',
-        email: 'miyokoto@mail.ru',
+        name: 'Vignesh',
+        email: 'vicky@mail.ru',
         phone: '98544321456',
         company: 'Indsam',
         status: 'Active',
     },
     {
         id: 5,
-        name: 'Leslie Alexander',
-        email: 'icadahli@gmail.com',
+        name: 'Richard',
+        email: 'richard@gmail.com',
         phone: '90443217865',
         company: 'VK Architect',
         status: 'Inactive',
@@ -59,7 +59,31 @@ const UsersListLayer = () => {
                         />
                         <Icon icon="ion:search-outline" className="icon" />
                     </form>
-             
+
+                        <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+                            <option value="Select Number" disabled>
+                                Select Chapter
+                            </option>
+                            <option value="10">GRIP Aram</option>
+                            <option value="15">GRIP Virutcham</option>
+                            <option value="20">GRIP Madhuram</option>
+                            <option value="20">GRIP Kireedam</option>
+                             <option value="20">GRIP Amudham</option>
+
+                        </select>
+
+                             <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+                            <option value="Select Number" disabled>
+                               This Week
+                            </option>
+                            <option value="10">This Month</option>
+                            <option value="15">Last Week</option>
+                            <option value="20">Last Month</option>
+                            <option value="20">This Term</option>
+
+
+                        </select>
+
                 </div>
                 <Link
                     to="/add-user"

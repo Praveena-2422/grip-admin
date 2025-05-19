@@ -15357,7 +15357,7 @@ td.fc-header-center {
   inset-inline-start: -100%;
   width: 15.625rem;
   height: 100vh;
-  background-color: var(--white);
+  background: linear-gradient(135deg, rgb(192, 34, 33), rgb(69, 68, 66));
   z-index: 3;
 }
 
@@ -15497,6 +15497,7 @@ td.fc-header-center {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+      background: #fff;
 }
 
 .sidebar-logo img {
@@ -15609,7 +15610,7 @@ td.fc-header-center {
   font-weight: 500;
   display: flex;
   align-items: center;
-  color: #111;
+  color: #fff !important;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -15836,7 +15837,7 @@ button.btn.btn-success.grip {
 }
 
 .card-body.chapterwisebox.p-24 .card {
-    background: linear-gradient(45deg, #ffeded, #0000001f);
+    background: linear-gradient(45deg, #ffffff, #ffffff1f);
 }
 
 
@@ -15882,4 +15883,94 @@ a.onetoonecount.text-primary-600.hover-text-primary.d-flex.align-items-center.ga
 
 .chname.text-black.fw-semibold {
     font-size: 22px;
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #3b82f612, #60a5fa);
+}
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8b5cf60f, #a78bfa);
+}
+
+.bg-gradient-pink {
+    background: linear-gradient(135deg, #ec48991c, #F472B6);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #10b98114, #34D399);
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient(135deg, #06b6d417, #22D3EE);
+}
+
+.bg-gradient-indigo {
+    background: linear-gradient(135deg, #6366f117, #818CF8);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #f9731614, #FB923C);
+}
+
+.bg-gradient-amber {
+    background: linear-gradient(135deg, #f59e0b14, #FBBF24);
+}
+
+.bg-gradient-lime {
+    background: linear-gradient(135deg, #84cc161a, #A3E635);
+}
+
+.bg-gradient-teal {
+    background: linear-gradient(135deg, #14b8a612, #2DD4BF);
+}
+
+
+.bg-primary-500 {
+    background-color: #8633312b !important;
+}
+
+
+.user-grid-card {
+  flex: 0 0 20%; /* 100% / 5 = 20% */
+  max-width: 20%;
+}
+@media (max-width: 1400px) {
+  .user-grid-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .user-grid-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+.position-relative.border.radius-16.bg-overlay.overflow-hidden {
+    background: linear-gradient(45deg, #ae2726, #4e4240);
+}
+
+
+.bg-grip {
+    background: linear-gradient(45deg, #aa2827, #50413f);
+}
+
+
+.card.p-3.radius-8.h-100.bggg-white i {
+    color: #fff !important;
+    font-size: 20px !important;
+}
+
+.card.p-3.radius-8.h-100.bggg-white {
+    background: transparent;
+}
+
+.text-grip {
+    color: #c02222;
+}
+
+a.text-grip {
+    color: #c02222;
 }

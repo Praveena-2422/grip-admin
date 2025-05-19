@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const OnetoOneLayer = () => {
+const TestimonialOverallLayer = () => {
   // Dynamic data in JSON format
   const gripChapters = [
     {
@@ -62,7 +62,7 @@ const OnetoOneLayer = () => {
         { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
         { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
         { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
-      
+
       ]
     }
   ];
@@ -78,7 +78,7 @@ const OnetoOneLayer = () => {
                      <div className="chapterwiseheading d-flex align-items-center flex-wrap gap-2 justify-content-between">
                       <h6 className="mb-2 fw-bold text-lg mb-0">{chapter.name}</h6>
                       <Link
-                        to="/chapterone-list"
+                        to="/testimonial-list"
                         className="onetoonecount text-primary-600 hover-text-primary d-flex align-items-center gap-1"
                       >
                         {chapter.memberCount}
@@ -271,4 +271,4 @@ const OnetoOneLayer = () => {
   );
 };
 
-export default OnetoOneLayer;
+export default TestimonialOverallLayer;

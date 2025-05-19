@@ -209,7 +209,21 @@ const MasterLayout = ({ children }) => {
 <Icon icon="material-symbols:toc" className="menu-icon" />
 
 
-                   Chapter List
+                   Chapters
+                  </NavLink>
+                </li>
+                      <li>
+                  <NavLink
+                    to='/chapterwise'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+<Icon icon="mdi:file-chart-outline" className="menu-icon" />
+
+
+
+                   Chapter Report
                   </NavLink>
                 </li>
                 </ul>
@@ -221,24 +235,14 @@ const MasterLayout = ({ children }) => {
                         {/* Invoice Dropdown */}
             <li className='dropdown'>
               <Link to='#'>
-                 <Icon icon="mdi:book-outline" className="menu-icon" />
+             <Icon icon="mdi:account-tie" className="menu-icon" />
 
-                <span>Performance</span>
+
+
+                <span>Performers</span>
               </Link>
               <ul className='sidebar-submenu'>
-                <li>
-                  <NavLink
-                    to='/chapterwise'
-                    className={(navData) =>
-                      navData.isActive ? "active-page" : ""
-                    }
-                  >
-<Icon icon="material-symbols:toc" className="menu-icon" />
 
-
-                   Chapter Wise
-                  </NavLink>
-                </li>
                 <li>
                   <NavLink
                     to='/121-list'
@@ -250,21 +254,21 @@ const MasterLayout = ({ children }) => {
 
 
 
-                 121 List
+                 121's
                   </NavLink>
                 </li>
 
 
                        <li>
                   <NavLink
-                    to='/referral-list'
+                    to='/referral'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
 <Icon icon="material-symbols:person-add-outline" className="menu-icon" />
 
-                Referral  list
+                Referral's
                   </NavLink>
                 </li>
 
@@ -272,28 +276,28 @@ const MasterLayout = ({ children }) => {
 
                        <li>
                   <NavLink
-                    to='/thankyou-slip'
+                    to='/thankyou'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
 <Icon icon="mdi:hand-heart-outline" className="menu-icon" />
 
-             Thank you Slip List
+             Thank you Slip
                   </NavLink>
                 </li>
 
 
                           <li>
                   <NavLink
-                   to='/testimonial-list'
+                   to='/testimoniall'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
 <Icon icon="mdi:message-star-outline" className="menu-icon" />
 
-           Testimonial List
+           Testimonial
                   </NavLink>
                 </li>
 
@@ -310,26 +314,13 @@ const MasterLayout = ({ children }) => {
 
 
 
-          Visitors
+          Visitor /Guest
                   </NavLink>
                 </li>
 
 
 
 
-                       <li>
-                  <NavLink
-                     to='/powerdate'
-                    className={(navData) =>
-                      navData.isActive ? "active-page" : ""
-                    }
-                  >
-<Icon icon="mdi:calendar-star-outline" className="menu-icon" />
-
-
-          Power date
-                  </NavLink>
-                </li>
 
 
 
@@ -365,10 +356,10 @@ const MasterLayout = ({ children }) => {
 <Icon icon="mdi:account-details-outline" className="menu-icon" />
 
 
-                   Members List
+                   Members
                   </NavLink>
                 </li>
-                <li>
+                {/* <li>
                   <NavLink
                      to='/members-grid'
                     className={(navData) =>
@@ -379,7 +370,7 @@ const MasterLayout = ({ children }) => {
 
                  Members Profile
                   </NavLink>
-                </li>
+                </li> */}
 
 
               </ul>

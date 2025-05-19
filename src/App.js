@@ -111,6 +111,9 @@ import VisitorsListPage from "./pages/VisitorsListPage";
 import PowerDatePage from "./pages/PowerDatePage";
 import ThankyouNotePage from "./pages/ThankyouNotePage";
 import TestimonialPage from "./pages/TestimonialPage";
+import ReferralOverallpage from "./pages/ReferralOverallPage";
+import ThankyouOverallPage from "./pages/ThankyouOverallPage";
+import TestimonialOverallPage from "./pages/TestimonialOverallPage";
 
 function App() {
   return (
@@ -150,10 +153,18 @@ function App() {
 
            <Route exact path='/121-list' element={<OnetoOnePage />} />
 
+            <Route exact path='/referral' element={<ReferralOverallpage />} />
+
+
+                <Route exact path='/thankyou' element={<ThankyouOverallPage />} />
+
             <Route exact path='/chapterone-list' element={<ChapterOnePage />} />
 
 
               <Route exact path='/testimonial-list' element={<TestimonialPage />} />
+
+
+                <Route exact path='/testimoniall' element={<TestimonialOverallPage />} />
 
 
          <Route exact path='/member-list' element={<MemberListPage />} />

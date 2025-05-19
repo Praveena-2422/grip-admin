@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { Link } from 'react-router-dom';
-import Modal from 'react-bootstrap/Modal'; // Bootstrap modal
-import Button from 'react-bootstrap/Button'; // Bootstrap button
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const ThankyouNoteLayer = () => {
     const [showModal, setShowModal] = useState(false);
@@ -19,11 +18,56 @@ const ThankyouNoteLayer = () => {
     };
 
     const data = [
-        { id: 1, invitedBy: "Elankathir", chapter: "GRIP Aram", name: "Prathap", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.png" },
-        { id: 2, invitedBy: "Vignesh", chapter: "GRIP Virutcham", name: "Surya", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.png" },
-        { id: 3, invitedBy: "Naresh", chapter: "GRIP Aram", name: "Ramesh", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.pngg" },
-        { id: 4, invitedBy: "Deepak", chapter: "GRIP Virutcham", name: "Abraham", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.pngg" },
-        { id: 5, invitedBy: "Prakash", chapter: "GRIP Virutcham", name: "Adhi", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.png" },
+        {
+            id: 1,
+            date: "2025-05-10",
+            from: "Elankathir",
+            thankTo: "Prathap",
+            value: "₹500",
+            comment: "Great support on the event",
+            chapter: "GRIP Aram",
+            image: "assets/images/user-grid/user-grid-bg1.png",
+        },
+        {
+            id: 2,
+            date: "2025-05-11",
+            from: "Vignesh",
+            thankTo: "Surya",
+            value: "₹750",
+            comment: "Excellent referral given",
+            chapter: "GRIP Virutcham",
+            image: "assets/images/user-grid/user-grid-bg1.png",
+        },
+        {
+            id: 3,
+            date: "2025-05-12",
+            from: "Naresh",
+            thankTo: "Ramesh",
+            value: "₹600",
+            comment: "Helped with business lead",
+            chapter: "GRIP Aram",
+            image: "assets/images/user-grid/user-grid-bg1.png",
+        },
+        {
+            id: 4,
+            date: "2025-05-13",
+            from: "Deepak",
+            thankTo: "Abraham",
+            value: "₹1000",
+            comment: "Valuable market insight",
+            chapter: "GRIP Virutcham",
+            image: "assets/images/user-grid/user-grid-bg1.png",
+        },
+        {
+            id: 5,
+            date: "2025-05-14",
+            from: "Prakash",
+            thankTo: "Adhi",
+            value: "₹450",
+            comment: "On-time delivery support",
+            chapter: "GRIP Virutcham",
+            image: "assets/images/user-grid/user-grid-bg1.png",
+        },
     ];
 
     return (
@@ -46,21 +90,25 @@ const ThankyouNoteLayer = () => {
                             <thead>
                                 <tr>
                                     <th>S.No</th>
-                                    <th>Invited By</th>
+                                    <th>Date</th>
+                                    <th>From</th>
+                                    <th>Thank to</th>
+                                    <th>Value (in Rupees)</th>
+                                    <th>Commends</th>
                                     <th>Chapter</th>
-                                    <th>Name</th>
-                                    <th>Comments</th>
-                                    <th>Image</th>
+                                    <th>View</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {data.map((item, index) => (
                                     <tr key={item.id}>
                                         <td>{index + 1}.</td>
-                                        <td>{item.invitedBy}</td>
-                                        <td>{item.chapter}</td>
-                                        <td>{item.name}</td>
+                                        <td>{item.date}</td>
+                                        <td>{item.from}</td>
+                                        <td>{item.thankTo}</td>
+                                        <td>{item.value}</td>
                                         <td>{item.comment}</td>
+                                        <td>{item.chapter}</td>
                                         <td>
                                             <button
                                                 type="button"
@@ -78,9 +126,8 @@ const ThankyouNoteLayer = () => {
 
                     {/* Image Modal */}
                     <Modal show={showModal} onHide={handleClose} centered>
-
                         <Modal.Body className="text-center">
-                            <img src={selectedImage} alt="Popup"  className="img-fluid" />
+                            <img src={selectedImage} alt="Popup" className="img-fluid" />
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>

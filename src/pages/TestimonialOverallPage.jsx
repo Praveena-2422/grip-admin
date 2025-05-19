@@ -2,9 +2,10 @@ import React from "react";
 import MasterLayout from "../masterLayout/MasterLayout";
 import Breadcrumb from "../components/Breadcrumb";
 
-import OnetoOneLayer from "../components/OnetoOneLayer";
 
-const OnetoOnePage = () => {
+import TestimonialOverallLayer from "../components/TestimonialOverallLayer";
+
+const TestimonialOverallPage = () => {
   return (
     <>
 
@@ -12,10 +13,10 @@ const OnetoOnePage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        <Breadcrumb title="121's" name="Performance" />
+        <Breadcrumb title="Testimonial" name="Performance" />
 
         {/* RoleAccessLayer */}
-        <OnetoOneLayer />
+        <TestimonialOverallLayer />
 
       </MasterLayout>
 
@@ -23,4 +24,4 @@ const OnetoOnePage = () => {
   );
 };
 
-export default OnetoOnePage;
+export default TestimonialOverallPage;

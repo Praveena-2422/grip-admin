@@ -1,10 +1,10 @@
 import React from "react";
 import MasterLayout from "../masterLayout/MasterLayout";
 import Breadcrumb from "../components/Breadcrumb";
-import UsersListLayer from "../components/UsersListLayer";
 
+import ThankyouOverallLayer from "../components/ThankyouOverallLayer";
 
-const UsersListPage = () => {
+const ThankyouOverallPage = () => {
   return (
     <>
 
@@ -12,10 +12,10 @@ const UsersListPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-      <Breadcrumb title="Admin Users" name="User Management" />
+        <Breadcrumb title="Thankyou Slip" name="Performance" />
 
-        {/* UsersListLayer */}
-        <UsersListLayer />
+        {/* RoleAccessLayer */}
+        <ThankyouOverallLayer />
 
       </MasterLayout>
 
@@ -23,4 +23,4 @@ const UsersListPage = () => {
   );
 };
 
-export default UsersListPage;
+export default ThankyouOverallPage;

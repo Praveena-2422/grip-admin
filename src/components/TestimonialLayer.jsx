@@ -1,30 +1,72 @@
 import React, { useState } from 'react';
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { Link } from 'react-router-dom';
-import Modal from 'react-bootstrap/Modal'; // Bootstrap modal
-import Button from 'react-bootstrap/Button'; // Bootstrap button
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const TestimonialLayer = () => {
     const [showModal, setShowModal] = useState(false);
-    const [selectedImage, setSelectedImage] = useState('');
+    const [selectedDoc, setSelectedDoc] = useState('');
 
-    const handleShowImage = (imageUrl) => {
-        setSelectedImage(imageUrl);
+    const handleShowDoc = (docUrl) => {
+        setSelectedDoc(docUrl);
         setShowModal(true);
     };
 
     const handleClose = () => {
         setShowModal(false);
-        setSelectedImage('');
+        setSelectedDoc('');
     };
 
     const data = [
-        { id: 1, invitedBy: "Elankathir", chapter: "GRIP Aram", name: "Prathap", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.png" },
-        { id: 2, invitedBy: "Vignesh", chapter: "GRIP Virutcham", name: "Surya", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.png" },
-        { id: 3, invitedBy: "Naresh", chapter: "GRIP Aram", name: "Ramesh", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.pngg" },
-        { id: 4, invitedBy: "Deepak", chapter: "GRIP Virutcham", name: "Abraham", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.pngg" },
-        { id: 5, invitedBy: "Prakash", chapter: "GRIP Virutcham", name: "Adhi", comment: "Lorem Ipsum", image: "assets/images/user-grid/user-grid-bg1.png" },
+        {
+            id: 1,
+            date: '2025-05-10',
+            from: 'Elankathir',
+            testimonialTo: 'Prathap',
+            chapter: 'GRIP Aram',
+            commends: 'Great leadership and vision.',
+            doc: 'assets/pdf/testimonial.pdf', // pdf example
+        },
+        {
+            id: 2,
+            date: '2025-05-11',
+            from: 'Vignesh',
+            testimonialTo: 'Surya',
+            chapter: 'GRIP Virutcham',
+            commends: 'Exceptional collaboration skills.',
+            doc: 'assets/images/testimonial/testimonial.jpg',
+        },
+        {
+            id: 3,
+            date: '2025-05-12',
+            from: 'Naresh',
+            testimonialTo: 'Ramesh',
+            chapter: 'GRIP Aram',
+            commends: 'Very helpful and supportive.',
+            doc: 'assets/pdf/testimonial.pdf',
+        },
+        {
+            id: 4,
+            date: '2025-05-13',
+            from: 'Deepak',
+            testimonialTo: 'Abraham',
+            chapter: 'GRIP Virutcham',
+            commends: 'Always goes above and beyond.',
+            doc: 'assets/images/testimonial/testimonial.jpg',
+        },
+        {
+            id: 5,
+            date: '2025-05-14',
+            from: 'Prakash',
+            testimonialTo: 'Adhi',
+            chapter: 'GRIP Virutcham',
+            commends: 'Inspires the team with dedication.',
+            doc: 'assets/pdf/testimonial.pdf',
+        },
     ];
+
+    const isImage = (url) => /\.(jpeg|jpg|png|gif)$/i.test(url);
+    const isPdf = (url) => /\.pdf$/i.test(url);
 
     return (
         <div className="col-xxl-12 col-xl-12">
@@ -46,29 +88,33 @@ const TestimonialLayer = () => {
                             <thead>
                                 <tr>
                                     <th>S.No</th>
-                                    <th>Invited By</th>
+                                    <th>Date</th>
+                                    <th>From</th>
+                                    <th>Testimonial to</th>
                                     <th>Chapter</th>
-                                    <th>Name</th>
-                                    <th>Comments</th>
-                                    <th>Image</th>
+                                    <th>Commends</th>
+                                    <th>Uploaded Doc </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {data.map((item, index) => (
                                     <tr key={item.id}>
                                         <td>{index + 1}.</td>
-                                        <td>{item.invitedBy}</td>
+                                        <td>{item.date}</td>
+                                        <td>{item.from}</td>
+                                        <td>{item.testimonialTo}</td>
                                         <td>{item.chapter}</td>
-                                        <td>{item.name}</td>
-                                        <td>{item.comment}</td>
+                                        <td>{item.commends}</td>
                                         <td>
-                                            <button
-                                                type="button"
-                                                className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
-                                                onClick={() => handleShowImage(item.image)}
+
+                                            <Button
+                                                variant="link"
+                                                onClick={() => handleShowDoc(item.doc)}
+                                                  className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
+
                                             >
-                                                <Icon icon="majesticons:eye" className="icon text-xl" />
-                                            </button>
+                                                 <Icon icon="majesticons:eye" className="icon text-xl" />
+                                            </Button>
                                         </td>
                                     </tr>
                                 ))}
@@ -76,11 +122,22 @@ const TestimonialLayer = () => {
                         </table>
                     </div>
 
-                    {/* Image Modal */}
-                    <Modal show={showModal} onHide={handleClose} centered>
-
+                    {/* Document Modal */}
+                    <Modal show={showModal} onHide={handleClose} size="lg" centered>
                         <Modal.Body className="text-center">
-                            <img src={selectedImage} alt="Popup"  className="img-fluid" />
+                            {isImage(selectedDoc) && (
+                                <img src={selectedDoc} alt="Document" className="img-fluid" />
+                            )}
+                            {isPdf(selectedDoc) && (
+                                <iframe
+                                    src={selectedDoc}
+                                    title="PDF Document"
+                                    style={{ width: '100%', height: '500px', border: 'none' }}
+                                />
+                            )}
+                            {!isImage(selectedDoc) && !isPdf(selectedDoc) && (
+                                <p>Preview not available for this document type.</p>
+                            )}
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>

@@ -74,26 +74,25 @@ const ChapterWiseLayer = () => {
   return (
     <div className="cardd h-100 p-0 radius-12">
       <div className="card-body chapterwisebox p-24">
-        <div className="d-flex overflow-x-auto gap-4 pb-3">
+        <div className="row gy-4">
           {chapters.map((chapter, idx) => (
-            <div className="card min-width-300" key={idx}>
-              <div className="chapterwiseheading d-flex align-items-center flex-wrap gap-2 justify-content-between">
+            <div className="col-xxl-4" key={idx}>
+              <div className="card h-100">
+                <div className="chapterwiseheading d-flex align-items-center flex-wrap gap-2 justify-content-between p-3">
                   <h6 className="mb-2 fw-bold text-lg mb-0">{chapter.name}</h6>
-                  {/* Optional Link */}
                 </div>
-              <div className="card-body">
-
-                <div className="mt-3">
-                  {Object.entries(chapter.metrics).map(([label, value], i) => (
-                    <div className="d-flex align-items-center justify-content-between gap-3 mb-20" key={i}>
-                      <div className="d-flex align-items-center">
-                        <div className="flex-grow-1">
-                          <h6 className="text-md mb-0">{label}</h6>
-                        </div>
+                <div className="card-body">
+                  <div className="mt-3">
+                    {Object.entries(chapter.metrics).map(([label, value], i) => (
+                      <div
+                        className="d-flex align-items-center justify-content-between gap-3 mb-20"
+                        key={i}
+                      >
+                        <h6 className="text-md mb-0">{label}</h6>
+                        <span className="text-primary-light text-md fw-medium">{value}</span>
                       </div>
-                      <span className="text-primary-light text-md fw-medium">{value}</span>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

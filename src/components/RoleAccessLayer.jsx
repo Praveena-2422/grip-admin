@@ -61,7 +61,7 @@ const RoleAccessLayer = () => {
             {/* Style Two */}
             <div className='col-xxl-4 col-lg-4 col-sm-6 mb-0'>
               <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 mb-3"
+                className="kanban-card bg-neutral-50 p-3 radius-8 "
                 style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
               >
                 <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -128,7 +128,7 @@ const RoleAccessLayer = () => {
             </div>
             <div className='col-xxl-4 col-lg-4 col-sm-6'>
               <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 mb-3"
+                className="kanban-card bg-neutral-50 p-3 radius-8 "
                 style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
               >
                 <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -194,7 +194,7 @@ const RoleAccessLayer = () => {
             </div>
              <div className='col-xxl-4 col-lg-4 col-sm-6'>
               <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 mb-3"
+                className="kanban-card bg-neutral-50 p-3 radius-8 "
                 style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
               >
                 <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -260,7 +260,7 @@ const RoleAccessLayer = () => {
             </div>
               <div className='col-xxl-4 col-lg-4 col-sm-6'>
               <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 mb-3"
+                className="kanban-card bg-neutral-50 p-3 radius-8 "
                 style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
               >
                 <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -328,7 +328,7 @@ const RoleAccessLayer = () => {
 
                 <div className='col-xxl-4 col-lg-4 col-sm-6'>
               <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 mb-3"
+                className="kanban-card bg-neutral-50 p-3 radius-8 "
                 style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
               >
                 <table style={{ borderCollapse: 'collapse', width: '100%' }}>
@@ -396,7 +396,7 @@ const RoleAccessLayer = () => {
 
                 <div className='col-xxl-4 col-lg-4 col-sm-6'>
               <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 mb-3"
+                className="kanban-card bg-neutral-50 p-3 radius-8 "
                 style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
               >
                 <table style={{ borderCollapse: 'collapse', width: '100%' }}>
