@@ -12,7 +12,7 @@ const ChapterOnePage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        {/* <Breadcrumb title="Users Grid" /> */}
+        <Breadcrumb title="121 List" name="Performance" />
 
         {/* UsersListLayer */}
         <ChapterOneLayer />

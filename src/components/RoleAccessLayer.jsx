@@ -9,19 +9,42 @@ const RoleAccessLayer = () => {
     <>
       <div className="card h-100 p-0 radius-12">
         <div className="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
-          <div className="d-flex align-items-center flex-wrap gap-3">
+       <div className="d-flex align-items-center flex-wrap gap-3">
+                          <form className="navbar-search">
+                              <input
+                                  type="text"
+                                  className="bg-base h-40-px w-auto"
+                                  name="search"
+                                  placeholder="Search"
+                              />
+                              <Icon icon="ion:search-outline" className="icon" />
+                          </form>
 
-            <form className="navbar-search">
-              <input
-                type="text"
-                className="bg-base h-40-px w-auto"
-                name="search"
-                placeholder="Search"
-              />
-              <Icon icon="ion:search-outline" className="icon" />
-            </form>
+                              <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+                                  <option value="Select Number" disabled>
+                                      Select Chapter
+                                  </option>
+                                  <option value="10">GRIP Aram</option>
+                                  <option value="15">GRIP Virutcham</option>
+                                  <option value="20">GRIP Madhuram</option>
+                                  <option value="20">GRIP Kireedam</option>
+                                   <option value="20">GRIP Amudham</option>
 
-          </div>
+                              </select>
+
+                                   <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+                                  <option value="Select Number" disabled>
+                                     This Week
+                                  </option>
+                                  <option value="10">This Month</option>
+                                  <option value="15">Last Week</option>
+                                  <option value="20">Last Month</option>
+                                  <option value="20">This Term</option>
+
+
+                              </select>
+
+                      </div>
 
           <div className="d-flex align-items-center flex-wrap gap-1">
 
@@ -68,7 +91,11 @@ const RoleAccessLayer = () => {
                   <tbody>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-                      <td style={{ padding: '8px 0' }}>GRIP Aram <span className='chapterday'>(Tuesday)</span></td>
+                      <td style={{ padding: '8px 0' }}>GRIP Aram </td>
+                    </tr>
+                      <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                      <td style={{ padding: '8px 0' }}><strong>Chapter day:</strong></td>
+                      <td style={{ padding: '8px 0' }}>Tuesday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
@@ -135,7 +162,11 @@ const RoleAccessLayer = () => {
                   <tbody>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-                      <td style={{ padding: '8px 0' }}>GRIP Virutcham <span className='chapterday'>(Wednesday)</span></td>
+                      <td style={{ padding: '8px 0' }}>GRIP Virutcham </td>
+                    </tr>
+                      <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                      <td style={{ padding: '8px 0' }}><strong>Chapter Day:</strong></td>
+                      <td style={{ padding: '8px 0' }}>Wednesday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
@@ -201,7 +232,11 @@ const RoleAccessLayer = () => {
                   <tbody>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-                      <td style={{ padding: '8px 0' }}>GRIP Madhuram <span className='chapterday'>(Thursday)</span></td>
+                      <td style={{ padding: '8px 0' }}>GRIP Madhuram </td>
+                    </tr>
+                      <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                      <td style={{ padding: '8px 0' }}><strong>Chapter Day:</strong></td>
+                      <td style={{ padding: '8px 0' }}>Thursday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
@@ -267,7 +302,11 @@ const RoleAccessLayer = () => {
                   <tbody>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-                      <td style={{ padding: '8px 0' }}>GRIP Kireedam <span className='chapterday'>(Friday)</span></td>
+                      <td style={{ padding: '8px 0' }}>GRIP Kireedam </td>
+                    </tr>
+                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                      <td style={{ padding: '8px 0' }}><strong>Chapter Day:</strong></td>
+                      <td style={{ padding: '8px 0' }}>Friday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
@@ -335,7 +374,11 @@ const RoleAccessLayer = () => {
                   <tbody>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-                      <td style={{ padding: '8px 0' }}>GRIP Amudham <span className='chapterday'>(Saturday)</span></td>
+                      <td style={{ padding: '8px 0' }}>GRIP Amudham </td>
+                    </tr>
+                       <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
+                      <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
+                      <td style={{ padding: '8px 0' }}>Saturday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
                       <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
@@ -393,73 +436,6 @@ const RoleAccessLayer = () => {
 
             </div>
 
-
-                <div className='col-xxl-4 col-lg-4 col-sm-6'>
-              <div
-                className="kanban-card bg-neutral-50 p-3 radius-8 "
-                style={{ userSelect: 'none', background: 'rgb(255, 255, 255)' }}
-              >
-                <table style={{ borderCollapse: 'collapse', width: '100%' }}>
-                  <tbody>
-                    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Chapter Name:</strong></td>
-                      <td style={{ padding: '8px 0' }}>GRIP Aram <span className='chapterday'>(Tuesday)</span></td>
-                    </tr>
-                    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
-                      <td style={{ padding: '8px 0' }}>Chennai</td>
-                    </tr>
-                    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>CID:</strong></td>
-                      <td style={{ padding: '8px 0' }}>Richard</td>
-                    </tr>
-                    <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Location:</strong></td>
-                      <td style={{ padding: '8px 0' }}>Pallavaram</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <div className="d-flex align-items-center justify-content-between pt-3">
-                  <div className="d-flex align-items-center gap-2">
-                    <span className="start-date text-secondary-light">Status: <span className="text-success-600">Active</span></span>
-                  </div>
-
-                  <div className="d-flex align-items-center gap-2">
-                          <button
-                      type="button"
-                      className="bg-info-focus bg-hover-info-200 text-info-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
-                    >
-                           <Link
-                                        to="/chapter-view"
-                                        className=" text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
-                                    >
-                                       <Icon
-                        icon="majesticons:eye"
-                        className="icon text-xl"
-                      />
-
-                                    </Link>
-
-                    </button>
-                    <button
-                      type="button"
-                      className="bg-success-focus text-success-600 bg-hover-success-200 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
-                   data-bs-toggle="modal"
-            data-bs-target="#exampleModalOne"   >
-                      <Icon icon="lucide:edit" className="menu-icon" />
-                    </button>
-                    {/* <button
-                      type="button"
-                      className="remove-item-btn bg-danger-focus bg-hover-danger-200 text-danger-600 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
-                    >
-                      <Icon icon="fluent:delete-24-regular" className="menu-icon" />
-                    </button> */}
-                  </div>
-                </div>
-              </div>
-
-            </div>
 
           </div>
 

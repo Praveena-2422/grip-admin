@@ -15930,22 +15930,6 @@ a.onetoonecount.text-primary-600.hover-text-primary.d-flex.align-items-center.ga
 }
 
 
-.user-grid-card {
-  flex: 0 0 20%; /* 100% / 5 = 20% */
-  max-width: 20%;
-}
-@media (max-width: 1400px) {
-  .user-grid-card {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .user-grid-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
 
 
 .position-relative.border.radius-16.bg-overlay.overflow-hidden {

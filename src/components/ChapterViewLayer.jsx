@@ -105,28 +105,7 @@ const ChapterViewLayer = () => {
 
       ]
     },
-    {
-      id: 5,
-      name: "Guest's",
-      memberCount: 70,
-      members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
 
-      ]
-    },
-    {
-      id: 6,
-      name: "Power Date",
-      memberCount: 70,
-      members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
-
-      ]
-    },
 
   ];
 
@@ -140,16 +119,23 @@ const ChapterViewLayer = () => {
         <div className="row g-4 align-items-start">
 
           {/* Left Section - Meeting Details */}
-          <div className="col-md-4">
+          <div className="col-md-3">
             <h5 className="fw-bold">GRIP <span style={{ fontWeight: 300 }}>Aram</span></h5>
             <p className="text-muted mb-2">Meeting is only on invite</p>
-            <div className="mt-20 mb-0 fw-bold" >
-              <h6 className="fw-bold">Member Details</h6>
-            </div>
+
             <div className="mt-2 text-sm">Tuesday 7:00 AM</div>
             <div className="text-sm mb-3" style={{ background: '#ccc', display: 'inline-block', padding: '2px 8px', borderRadius: '4px' }}>
               in-Person
             </div>
+
+          </div>
+
+                <div className="col-md-3">
+
+            <div className="mt-0 mb-0 fw-bold" >
+              <h6 className="fw-bold">Meeting Details</h6>
+            </div>
+
             <div className="text-sm mb-0">The Park</div>
             <div className="text-sm text-muted">
               Nangambakkam<br />
@@ -161,14 +147,14 @@ const ChapterViewLayer = () => {
           </div>
 
           {/* Center Section - Member Count */}
-          <div className="col-md-4 text-center">
+          <div className="col-md-3 text-center">
             <h6 className="fw-bold">Member Count</h6>
             <h1 className="text-grip display-4">30</h1>
             <a href="#" className="text-grip text-sm">Show Members</a>
           </div>
 
           {/* Right Section - Buttons */}
-          <div className="col-md-4 d-flex flex-column align-items-end gap-3">
+          <div className="col-md-3 d-flex flex-column align-items-end gap-3">
             <button
               type="button"
               className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
@@ -241,7 +227,7 @@ const ChapterViewLayer = () => {
                     alt=""
                     className="border br-white border-width-2-px w-100-px mt-20 h-100-px rounded-circle object-fit-cover"
                   />
-                  <h6 className="text-lg mb-0 mt-3 text-white">Jerome</h6>
+                  <h6 className="text-lg mb-1 mt-3 text-white">Jerome</h6>
                   <span className="text-secondary-light text-white mb-16">
                     CID
                   </span>
@@ -253,9 +239,9 @@ const ChapterViewLayer = () => {
                     <a href="mailto:someone@example.com" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="Mail">
                       <Icon icon="mdi:email-outline" className="text-xl text-primary-600" />
                     </a>
-                    <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
+                    {/* <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
                       <Icon icon="solar:alt-arrow-right-linear" className="text-xl text-primary-600" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -269,7 +255,7 @@ const ChapterViewLayer = () => {
                     alt=""
                     className="border br-white border-width-2-px w-100-px h-100-px mt-20 rounded-circle object-fit-cover"
                   />
-                  <h6 className="text-lg mb-0 mt-3 text-white">Kamalhasan</h6>
+                  <h6 className="text-lg mb-1 mt-3 text-white">Kamalhasan</h6>
                   <span className="text-secondary-light text-white mb-16">
                     President
                   </span>
@@ -281,9 +267,9 @@ const ChapterViewLayer = () => {
                     <a href="mailto:someone@example.com" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="Mail">
                       <Icon icon="mdi:email-outline" className="text-xl text-primary-600" />
                     </a>
-                    <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
+                    {/* <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
                       <Icon icon="solar:alt-arrow-right-linear" className="text-xl text-primary-600" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -297,7 +283,7 @@ const ChapterViewLayer = () => {
                     alt=""
                     className="border br-white border-width-2-px mt-20 w-100-px h-100-px rounded-circle object-fit-cover"
                   />
-                  <h6 className="text-lg mb-0 mt-3 text-white">Vijay Ragavan</h6>
+                  <h6 className="text-lg mb-1 mt-3 text-white">Vijay Ragavan</h6>
                   <span className="text-secondary-light text-white mb-16">
                     Vice President
                   </span>
@@ -322,9 +308,9 @@ const ChapterViewLayer = () => {
                     <a href="mailto:someone@example.com" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="Mail">
                       <Icon icon="mdi:email-outline" className="text-xl text-primary-600" />
                     </a>
-                    <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
+                    {/* <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
                       <Icon icon="solar:alt-arrow-right-linear" className="text-xl text-primary-600" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -340,7 +326,7 @@ const ChapterViewLayer = () => {
                     alt=""
                     className="border br-white border-width-2-px w-100-px h-100-px rounded-circle mt-20 object-fit-cover"
                   />
-                  <h6 className="text-lg mb-0 mt-3 text-white">Kesavan</h6>
+                  <h6 className="text-lg mb-1 mt-3 text-white">Kesavan</h6>
                   <span className="text-secondary-light text-white mb-16">
                     Secratary
                   </span>
@@ -352,9 +338,9 @@ const ChapterViewLayer = () => {
                     <a href="mailto:someone@example.com" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="Mail">
                       <Icon icon="mdi:email-outline" className="text-xl text-primary-600" />
                     </a>
-                    <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
+                    {/* <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
                       <Icon icon="solar:alt-arrow-right-linear" className="text-xl text-primary-600" />
-                    </Link>
+                    </Link> */}
                   </div>
 
                 </div>
@@ -372,7 +358,7 @@ const ChapterViewLayer = () => {
                     alt=""
                     className="border br-white border-width-2-px w-100-px h-100-px rounded-circle mt-20 object-fit-cover"
                   />
-                  <h6 className="text-lg mb-0 mt-3 text-white">Kesavan</h6>
+                  <h6 className="text-lg mb-1 mt-3 text-white">Vignesh</h6>
                   <span className="text-secondary-light text-white mb-16">
                     Trainer
                   </span>
@@ -384,9 +370,9 @@ const ChapterViewLayer = () => {
                     <a href="mailto:someone@example.com" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="Mail">
                       <Icon icon="mdi:email-outline" className="text-xl text-primary-600" />
                     </a>
-                    <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
+                    {/* <Link to="/view-profile" className="btn btn-light p-10 radius-8 d-flex align-items-center justify-content-center" title="View Profile">
                       <Icon icon="solar:alt-arrow-right-linear" className="text-xl text-primary-600" />
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>
@@ -457,7 +443,7 @@ const ChapterViewLayer = () => {
 
           <div className='row gy-4'>
             {gripChapters.map((chapter) => (
-              <div className="col-xxl-4" key={chapter.id}>
+              <div className="col-xxl-3" key={chapter.id}>
                 <div className="card">
                   <div className="chapterwiseheading d-flex align-items-center flex-wrap gap-2 justify-content-between">
                     <h6 className="mb-2 fw-bold text-lg mb-0">{chapter.name}  ({chapter.memberCount})</h6>
