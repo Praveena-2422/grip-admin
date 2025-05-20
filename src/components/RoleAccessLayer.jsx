@@ -20,29 +20,7 @@ const RoleAccessLayer = () => {
                               <Icon icon="ion:search-outline" className="icon" />
                           </form>
 
-                              <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
-                                  <option value="Select Number" disabled>
-                                      Select Chapter
-                                  </option>
-                                  <option value="10">GRIP Aram</option>
-                                  <option value="15">GRIP Virutcham</option>
-                                  <option value="20">GRIP Madhuram</option>
-                                  <option value="20">GRIP Kireedam</option>
-                                   <option value="20">GRIP Amudham</option>
 
-                              </select>
-
-                                   <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
-                                  <option value="Select Number" disabled>
-                                     This Week
-                                  </option>
-                                  <option value="10">This Month</option>
-                                  <option value="15">Last Week</option>
-                                  <option value="20">Last Month</option>
-                                  <option value="20">This Term</option>
-
-
-                              </select>
 
                       </div>
 
