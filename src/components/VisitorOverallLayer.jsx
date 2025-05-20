@@ -80,42 +80,49 @@ const VisitorOverallLayer = () => {
   return (
     <>
       <div className="cardd h-100 p-0 radius-12">
-         <div className="d-flex align-items-center flex-wrap gap-3">
-                    <form className="navbar-search">
-                        <input
-                            type="text"
-                            className="bg-base h-40-px w-auto"
-                            name="search"
-                            placeholder="Search"
-                        />
-                        <Icon icon="ion:search-outline" className="icon" />
-                    </form>
+          <div className="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
+                                 <div className="d-flex align-items-center flex-wrap gap-3">
+                                       <form className="navbar-search">
+                                           <input
+                                               type="text"
+                                               className="bg-base h-40-px w-auto"
+                                               name="search"
+                                               placeholder="Search"
+                                           />
+                                           <Icon icon="ion:search-outline" className="icon" />
+                                       </form>
 
-                        <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
-                            <option value="Select Number" disabled>
-                                Select Chapter
-                            </option>
-                            <option value="10">GRIP Aram</option>
-                            <option value="15">GRIP Virutcham</option>
-                            <option value="20">GRIP Madhuram</option>
-                            <option value="20">GRIP Kireedam</option>
-                             <option value="20">GRIP Amudham</option>
 
-                        </select>
+                                   </div>
+
+                                <div className="d-flex align-items-center flex-wrap gap-3">
 
                              <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
-                            <option value="Select Number" disabled>
-                               This Week
-                            </option>
-                            <option value="10">This Month</option>
-                            <option value="15">Last Week</option>
-                            <option value="20">Last Month</option>
-                            <option value="20">This Term</option>
+                                               <option value="Select Number" disabled>
+                                                   Select Chapter
+                                               </option>
+                                               <option value="10">GRIP Aram</option>
+                                               <option value="15">GRIP Virutcham</option>
+                                               <option value="20">GRIP Madhuram</option>
+                                               <option value="20">GRIP Kireedam</option>
+                                                <option value="20">GRIP Amudham</option>
+
+                                           </select>
+
+                                                <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+                                               <option value="Select Number" disabled>
+                                                  This Week
+                                               </option>
+                                               <option value="10">This Month</option>
+                                               <option value="15">Last Week</option>
+                                               <option value="20">Last Month</option>
+                                               <option value="20">This Term</option>
 
 
-                        </select>
+                                           </select>
 
-                </div>
+                                </div>
+                              </div>
         <div className="card-body chapterwisebox p-24">
           <div className='row gy-4'>
             {gripChapters.map((chapter) => (

@@ -93,8 +93,8 @@ const MasterLayout = ({ children }) => {
           sidebarActive
             ? "sidebar active "
             : mobileMenu
-            ? "sidebar sidebar-open"
-            : "sidebar"
+              ? "sidebar sidebar-open"
+              : "sidebar"
         }
       >
         <button
@@ -117,7 +117,7 @@ const MasterLayout = ({ children }) => {
               className='dark-logo'
             />
             <img
-              src='assets/images/logo-icon.png'
+              src='assets/images/logo.png'
               alt='site logo'
               className='logo-icon'
             />
@@ -132,7 +132,7 @@ const MasterLayout = ({ children }) => {
                 to='/dashboard'
                 className={(navData) => (navData.isActive ? "active-page" : "")}
               >
-                  <Icon
+                <Icon
                   icon='solar:home-smile-angle-outline'
                   className='menu-icon'
                 />
@@ -158,7 +158,7 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon='mdi:account-outline' className='menu-icon' />
+                    <Icon icon='mdi:account-outline' className='menu-icon' />
 
                     Admin Users
                   </NavLink>
@@ -170,7 +170,7 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon='mdi:account-group-outline' className='menu-icon' />
+                    <Icon icon='mdi:account-group-outline' className='menu-icon' />
                     Panel Associate
                   </NavLink>
                 </li>
@@ -181,7 +181,7 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon='mdi:account-key-outline' className='menu-icon' />
+                    <Icon icon='mdi:account-key-outline' className='menu-icon' />
 
                     Role
                   </NavLink>
@@ -192,9 +192,9 @@ const MasterLayout = ({ children }) => {
 
 
 
-              <li className='dropdown'>
+            <li className='dropdown'>
               <Link to='#'>
-                 <Icon icon="mdi:book-outline" className="menu-icon" />
+                <Icon icon="mdi:book-outline" className="menu-icon" />
 
                 <span>Chapter</span>
               </Link>
@@ -206,36 +206,36 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="material-symbols:toc" className="menu-icon" />
+                    <Icon icon="material-symbols:toc" className="menu-icon" />
 
 
-                   Chapters
+                    Chapters
                   </NavLink>
                 </li>
-                      <li>
+                <li>
                   <NavLink
                     to='/chapterwise'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:file-chart-outline" className="menu-icon" />
+                    <Icon icon="mdi:file-chart-outline" className="menu-icon" />
 
 
 
-                   Chapter Report
+                    Chapter Report
                   </NavLink>
                 </li>
-                </ul>
-                </li>
+              </ul>
+            </li>
 
 
 
 
-                        {/* Invoice Dropdown */}
+            {/* Invoice Dropdown */}
             <li className='dropdown'>
               <Link to='#'>
-             <Icon icon="mdi:account-tie" className="menu-icon" />
+                <Icon icon="mdi:account-tie" className="menu-icon" />
 
 
 
@@ -250,71 +250,71 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:format-list-bulleted-type" className="menu-icon" />
+                    <Icon icon="mdi:format-list-bulleted-type" className="menu-icon" />
 
 
 
-                 121's
+                    121's
                   </NavLink>
                 </li>
 
 
-                       <li>
+                <li>
                   <NavLink
                     to='/referral'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="material-symbols:person-add-outline" className="menu-icon" />
+                    <Icon icon="material-symbols:person-add-outline" className="menu-icon" />
 
-                Referral's
+                    Referral's
                   </NavLink>
                 </li>
 
 
 
-                       <li>
+                <li>
                   <NavLink
                     to='/thankyou'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:hand-heart-outline" className="menu-icon" />
+                    <Icon icon="mdi:hand-heart-outline" className="menu-icon" />
 
-             Thank you Slip
+                    Thank you Slip
                   </NavLink>
                 </li>
 
 
-                          <li>
+                <li>
                   <NavLink
-                   to='/testimoniall'
+                    to='/testimoniall'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:message-star-outline" className="menu-icon" />
+                    <Icon icon="mdi:message-star-outline" className="menu-icon" />
 
-           Testimonial
+                    Testimonial
                   </NavLink>
                 </li>
 
 
 
-                          <li>
+                <li>
                   <NavLink
-                     to='/visitor'
+                    to='/visitor'
                     className={(navData) =>
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:eye-outline" className="menu-icon" />
+                    <Icon icon="mdi:eye-outline" className="menu-icon" />
 
 
 
-          Visitor /Guest
+                    Visitor /Guest
                   </NavLink>
                 </li>
 
@@ -339,10 +339,10 @@ const MasterLayout = ({ children }) => {
 
 
 
-                        {/* Invoice Dropdown */}
+            {/* Invoice Dropdown */}
             <li className='dropdown'>
               <Link to='#'>
-                 <Icon icon='fe:vector' className='menu-icon' />
+                <Icon icon='fe:vector' className='menu-icon' />
                 <span>Members</span>
               </Link>
               <ul className='sidebar-submenu'>
@@ -353,10 +353,10 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:account-details-outline" className="menu-icon" />
+                    <Icon icon="mdi:account-details-outline" className="menu-icon" />
 
 
-                   Members
+                    Members
                   </NavLink>
                 </li>
                 {/* <li>
@@ -379,10 +379,10 @@ const MasterLayout = ({ children }) => {
 
 
 
-                        {/* Invoice Dropdown */}
+            {/* Invoice Dropdown */}
             <li className='dropdown'>
               <Link to='#'>
-                 <Icon icon='fe:vector' className='menu-icon' />
+              <Icon icon="mdi:email-outline" className="menu-icon" />
                 <span>Enquiry Management</span>
               </Link>
               <ul className='sidebar-submenu'>
@@ -393,10 +393,11 @@ const MasterLayout = ({ children }) => {
                       navData.isActive ? "active-page" : ""
                     }
                   >
-<Icon icon="mdi:account-details-outline" className="menu-icon" />
+                    <Icon icon="mdi:comment-question-outline" className="menu-icon" />
 
 
-                   Enquiries
+
+                    Enquiries
                   </NavLink>
                 </li>
                 {/* <li>
@@ -532,7 +533,7 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                             Richard
+                              Richard
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
                               Invite you to Chapter
@@ -577,7 +578,7 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                             Kesavan
+                              Kesavan
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
                               Invite you to Chapter
@@ -598,10 +599,10 @@ const MasterLayout = ({ children }) => {
                           </span>
                           <div>
                             <h6 className='text-md fw-semibold mb-4'>
-                             Praveen
+                              Praveen
                             </h6>
                             <p className='mb-0 text-sm text-secondary-light text-w-200-px'>
-                               Invite you to Chapter
+                              Invite you to Chapter
                             </p>
                           </div>
                         </div>

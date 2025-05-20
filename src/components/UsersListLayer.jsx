@@ -60,7 +60,7 @@ const UsersListLayer = () => {
                         <Icon icon="ion:search-outline" className="icon" />
                     </form>
 
-                        <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+                        {/* <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
                             <option value="Select Number" disabled>
                                 Select Chapter
                             </option>
@@ -82,7 +82,7 @@ const UsersListLayer = () => {
                             <option value="20">This Term</option>
 
 
-                        </select>
+                        </select> */}
 
                 </div>
                 <Link

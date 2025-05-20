@@ -97,7 +97,7 @@ const MemberListLayer = () => {
                         </select>
 
                              <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
-                            <option value="Select Number" disabled>
+                            <option value="Select Number" >
                                This Week
                             </option>
                             <option value="10">This Month</option>

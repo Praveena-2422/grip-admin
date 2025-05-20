@@ -23,7 +23,7 @@ const ThankyouNoteLayer = () => {
             date: "2025-05-10",
             from: "Elankathir",
             thankTo: "Prathap",
-            value: "₹500",
+            value: "₹50000",
             comment: "Great support on the event",
             chapter: "GRIP Aram",
             image: "assets/images/user-grid/user-grid-bg1.png",
@@ -33,7 +33,7 @@ const ThankyouNoteLayer = () => {
             date: "2025-05-11",
             from: "Vignesh",
             thankTo: "Surya",
-            value: "₹750",
+            value: "₹7500000",
             comment: "Excellent referral given",
             chapter: "GRIP Virutcham",
             image: "assets/images/user-grid/user-grid-bg1.png",
@@ -43,7 +43,7 @@ const ThankyouNoteLayer = () => {
             date: "2025-05-12",
             from: "Naresh",
             thankTo: "Ramesh",
-            value: "₹600",
+            value: "₹6000000",
             comment: "Helped with business lead",
             chapter: "GRIP Aram",
             image: "assets/images/user-grid/user-grid-bg1.png",
@@ -53,7 +53,7 @@ const ThankyouNoteLayer = () => {
             date: "2025-05-13",
             from: "Deepak",
             thankTo: "Abraham",
-            value: "₹1000",
+            value: "₹100000",
             comment: "Valuable market insight",
             chapter: "GRIP Virutcham",
             image: "assets/images/user-grid/user-grid-bg1.png",
@@ -63,7 +63,7 @@ const ThankyouNoteLayer = () => {
             date: "2025-05-14",
             from: "Prakash",
             thankTo: "Adhi",
-            value: "₹450",
+            value: "₹450000",
             comment: "On-time delivery support",
             chapter: "GRIP Virutcham",
             image: "assets/images/user-grid/user-grid-bg1.png",
@@ -120,7 +120,7 @@ const ThankyouNoteLayer = () => {
                                     <th>Date</th>
                                     <th>From</th>
                                     <th>Thank to</th>
-                                    <th>Value (in Rupees)</th>
+                                    <th>Value</th>
                                     <th>Commends</th>
                                     <th>Chapter</th>
                                     <th>View</th>

@@ -123,7 +123,7 @@ const ChapterViewLayer = () => {
             <h5 className="fw-bold">GRIP <span style={{ fontWeight: 300 }}>Aram</span></h5>
             <p className="text-muted mb-2">Meeting is only on invite</p>
 
-            <div className="mt-2 text-sm">Tuesday 7:00 AM</div>
+            <div className="mt-2 mb-3 text-sm">Tuesday 7:00 AM</div>
             <div className="text-sm mb-3" style={{ background: '#ccc', display: 'inline-block', padding: '2px 8px', borderRadius: '4px' }}>
               in-Person
             </div>
@@ -150,28 +150,37 @@ const ChapterViewLayer = () => {
           <div className="col-md-3 text-center">
             <h6 className="fw-bold">Member Count</h6>
             <h1 className="text-grip display-4">30</h1>
-            <a href="#" className="text-grip text-sm">Show Members</a>
+            <a href="/member-list" className="text-grip text-sm">Show Members</a>
           </div>
 
           {/* Right Section - Buttons */}
           <div className="col-md-3 d-flex flex-column align-items-end gap-3">
+
             <button
               type="button"
               className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
             >
 
-              Add Member
+                   <Link
+                                    to="/add-member"
+                                    className=" text-white  d-flex align-items-center gap-1"
+                                  >
+
+                                  Add Member
               <Icon
                 icon="ic:baseline-plus"
                 className="icon text-xl line-height-1"
               />
+                                  </Link>
+
+
             </button>
 
             <select
-              className="form-select form-select-sm w-auto bg-base border text-white text-secondary-light rounded-pill"
-              defaultValue=""
+              className="form-select form-select-sm w-auto bg-base px-32 border text-white text-secondary-light rounded-pill"
+
             >
-              <option value="" disabled>
+              <option value="" >
                 This Week
               </option>
               <option value="Last Week">Last Week</option>
@@ -199,7 +208,7 @@ const ChapterViewLayer = () => {
                   </span>
                   <div>
                     <h6 className="fw-bold mb-1">{card.count.toLocaleString()}</h6>
-                    <span className="text-secondary text-sm">{card.label}</span>
+                    <span className="text-secondary text-md">{card.label}</span>
                   </div>
                 </div>
               </div>

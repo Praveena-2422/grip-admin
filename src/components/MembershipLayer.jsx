@@ -144,9 +144,9 @@ const MembershipLayer = () => {
                                             </h6> */}
                                             <div className='row gy-3'>
                                                 <div className="col-6 ">
-                                                    <label className="form-label">Select Region </label>
+                                                    <label className="form-label">Select Zone </label>
                                                     <select class="form-control form-select">
-                                                        <option value="Date">Select Region </option>
+                                                        <option value="Date">Select Zone </option>
                                                         <option value="1" selected="">Chennai</option>
                                                     </select>
 
@@ -161,8 +161,6 @@ const MembershipLayer = () => {
                                                         <option value="madhuram Thursday">GRIP Madhuram (Thursday)</option>
                                                         <option value="kireedam Friday">GRIP Kireedam (Friday)</option>
 
-
-                                                        <option value="amudham Saturday">GRIP Amudham (Saturday)</option>
                                                     </select>
                                                 </div>
                                                 <div className="col-6">
@@ -170,13 +168,14 @@ const MembershipLayer = () => {
                                                     <select class="form-control form-select">
 
                                                         <option value=""> Select Name </option>
-                                                        <option value="rajesh">Rajesh</option>
-                                                        <option value="madhu">Madhu</option>
-                                                        <option value="praburajan">Praburajan</option>
-                                                        <option value="gajendran">Gajendran</option>
-                                                        <option value="kirubakaran">Kirubakaran</option>
-                                                        <option value="Kumar Subramaniam">Kumar Subramaniam</option>
-                                                        <option value="Palanikumar">Palanikumar</option>
+                                                        <option value="madhu">M Madhu</option>
+                                <option value="rajesh">R Rajesh</option>
+                                <option value="praburajan">E Praburajan</option>
+                                <option value="gajendran">K Gajendran</option>
+                                <option value="kirubakaran">K Kirubakaran</option>
+                                <option value="r anand">R Anand</option>
+                                <option value="Palanikumar">Palanikumar</option>
+                                <option value="balasubramani">BalaSubramani</option>
 
                                                     </select>
                                                 </div>
@@ -209,7 +208,7 @@ const MembershipLayer = () => {
                                                     <button
                                                         onClick={nextStep}
                                                         type='button'
-                                                        className='form-wizard-next-btn btn btn-primary-600 px-32'
+                                                        className='form-wizard-next-btn btn btn-primary grip px-32'
                                                     >
                                                         Next
                                                     </button>
@@ -282,7 +281,7 @@ const MembershipLayer = () => {
                                                 </div>
 
 
-                                                <div className="col-6">
+                                                <div className="col-12">
                                                     <label className="form-label">
                                                         Date of Birth  </label>
                                                     <input type="date" name="#0" class="form-control" />
@@ -310,6 +309,22 @@ const MembershipLayer = () => {
                                                     </select>
 
                                                 </div>
+
+
+                                                         <div className="col-12">
+                            <label className="form-label">Education</label>
+                            <select class="form-control form-select">
+                                <option value="">Select Education</option>
+                                <option value="High School">High School</option>
+                                <option value="Diploma">Diploma in Business</option>
+                                <option value="Bachelor">Bachelor's Degree</option>
+                                <option value="MBA">MBA / Master's in Business</option>
+                                <option value="Professional Degree">Professional Degree</option>
+                                <option value="Entrepreneurship Certificate">Entrepreneurship Certificate</option>
+                                <option value="Others">Others</option>
+                            </select>
+
+                        </div>
 
                                             </div>
 
@@ -387,7 +402,7 @@ const MembershipLayer = () => {
                                                     <button
                                                         onClick={nextStep}
                                                         type='button'
-                                                        className='form-wizard-next-btn btn btn-primary-600 px-32'
+                                                        className='form-wizard-next-btn btn btn-primary grip px-32'
                                                     >
                                                         Next
                                                     </button>
@@ -453,42 +468,32 @@ const MembershipLayer = () => {
 
 
                                             </div>
-                                            <h6 className='text-md text-neutral-500'><b>Business Experience</b></h6>
+                                            <h6 className='text-md text-neutral-500'><b>Your Business Details</b></h6>
                                             <div className="row gy-3 mb-5">
-                                                <div className="col-lg-4">
-                                                    <label className="form-label">Share your business experience </label>
+                                                <div className="col-lg-6">
+                                                    <label className="form-label">Describe Your Business Details </label>
                                                     <textarea
                                                         name="#0"
                                                         className="form-control"
-                                                        rows={3}
+                                                        rows={2}
                                                         cols={50}
 
                                                         defaultValue={""}
                                                     />
                                                 </div>
-                                                <div className="col-lg-4">
-                                                    <label className="form-label">Length of time in business</label>
-                                                    <textarea
-                                                        name="#0"
-                                                        className="form-control"
-                                                        rows={3}
-                                                        cols={50}
+                                                 <div className="col-lg-6">
+                            <label className="form-label">How many years are you in the business?  </label>
 
+                           <select class="form-control form-select">
+                                <option value="" disabled="" selected="">Select duration</option>
+                                <option value="below_1_year">Below 1 year</option>
+                                <option value="1_5_years">1 to 5 years</option>
+                                <option value="6_10_years">6 to 10 years</option>
+                                <option value="11_15_years">11 to 15 years</option>
+                                <option value="above_15_years">Above 15 years</option>
+                            </select>
+                        </div>
 
-                                                    />
-                                                </div>
-                                                <div className="col-lg-4 ">
-                                                    <label className="form-label">
-                                                        Educational Background</label>
-                                                    <textarea
-                                                        className="form-control"
-                                                        rows={3}
-                                                        cols={50}
-
-
-                                                    />
-
-                                                </div>
 
 
                                             </div>
@@ -535,7 +540,7 @@ const MembershipLayer = () => {
 
 
 
-                                                <div className="col-4">
+                                                <div className="col-6">
                                                     <label className="form-label">Phone </label>
                                                     <input
                                                         type="text"
@@ -546,19 +551,9 @@ const MembershipLayer = () => {
                                                 </div>
 
 
-                                                <div className="col-4">
-                                                    <label className="form-label">
-                                                        Email </label>
-                                                    <input
-                                                        type="email"
-                                                        name="#0"
-                                                        className="form-control"
-
-                                                    />
-                                                </div>
 
 
-                                                <div className="col-4 mb-20">
+                                                <div className="col-6 mb-20">
                                                     <label className="form-label">
                                                         Relationship </label>
                                                     <input
@@ -601,7 +596,7 @@ const MembershipLayer = () => {
                                                     <button
                                                         onClick={nextStep}
                                                         type='button'
-                                                        className='form-wizard-next-btn btn btn-primary-600 px-32'
+                                                        className='form-wizard-next-btn btn btn-primary grip px-32'
                                                     >
                                                         Next
                                                     </button>

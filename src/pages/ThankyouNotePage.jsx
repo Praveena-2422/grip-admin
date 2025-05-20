@@ -12,7 +12,7 @@ const ThankyouNotePage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        <Breadcrumb title="Thank You Note Slip" name="Performance" />
+        <Breadcrumb title="Thank you Slip" name="Performance" />
 
         {/* RoleAccessLayer */}
         <ThankyouNoteLayer />

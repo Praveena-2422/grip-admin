@@ -8,7 +8,7 @@ const LatestAppointmentsOne = () => {
         <div className='card-header border-bottom bg-base py-16 px-24 d-flex align-items-center justify-content-between'>
           <h6 className='text-lg fw-semibold mb-0'>Recent Member's</h6>
           <Link
-            to='#'
+            to='/member-list'
             className='text-primary-600 hover-text-primary d-flex align-items-center gap-1'
           >
             View All
@@ -19,10 +19,13 @@ const LatestAppointmentsOne = () => {
           </Link>
         </div>
         <div className='card-body p-0'>
-          <div className='table-responsive scroll-sm'>
+          <div className='table-responsive scroll-sm px-3'>
             <table className='table bordered-table mb-0 rounded-0 border-0'>
               <thead>
                 <tr>
+                   <th scope='col' className='bg-transparent rounded-0'>
+                   S.No
+                  </th>
                   <th scope='col' className='bg-transparent rounded-0'>
                     Name
                   </th>
@@ -39,6 +42,7 @@ const LatestAppointmentsOne = () => {
               </thead>
               <tbody>
                 <tr>
+                  <td>1.</td>
                   <td>Elankathir</td>
                   <td>Web Developer</td>
                   <td>Syncraze</td>
@@ -51,6 +55,7 @@ const LatestAppointmentsOne = () => {
                   </td>
                 </tr>
                 <tr>
+                  <td>2.</td>
                   <td>Kesavan </td>
                   <td>Photographer</td>
                   <td>K7 Studios</td>
@@ -59,6 +64,7 @@ const LatestAppointmentsOne = () => {
                   </td>
                 </tr>
                 <tr>
+                  <td>3.</td>
                   <td>Vignesh</td>
                   <td>Digital Marketing</td>
                   <td>Iriscoders</td>

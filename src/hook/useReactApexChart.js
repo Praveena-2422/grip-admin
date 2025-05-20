@@ -76,7 +76,7 @@ const useReactApexChart = () => {
     yaxis: {
       labels: {
         formatter: function (value) {
-          return "$" + value + "k";
+          return "₹" + value + "k";
         },
         style: {
           fontSize: "14px",
@@ -442,18 +442,18 @@ const useReactApexChart = () => {
           show: false,
         },
         categories: [
-          `Jan ${currentYear}`,
-          `Feb ${currentYear}`,
-          `Mar ${currentYear}`,
-          `Apr ${currentYear}`,
-          `May ${currentYear}`,
-          `Jun ${currentYear}`,
-          `Jul ${currentYear}`,
-          `Aug ${currentYear}`,
-          `Sep ${currentYear}`,
-          `Oct ${currentYear}`,
-          `Nov ${currentYear}`,
-          `Dec ${currentYear}`,
+          `Jan ₹{currentYear}`,
+          `Feb ₹{currentYear}`,
+          `Mar ₹{currentYear}`,
+          `Apr ₹{currentYear}`,
+          `May ₹{currentYear}`,
+          `Jun ₹{currentYear}`,
+          `Jul ₹{currentYear}`,
+          `Aug ₹{currentYear}`,
+          `Sep ₹{currentYear}`,
+          `Oct ₹{currentYear}`,
+          `Nov ₹{currentYear}`,
+          `Dec ₹{currentYear}`,
         ],
         tooltip: {
           enabled: false,
@@ -4495,7 +4495,7 @@ const useReactApexChart = () => {
     yaxis: {
       labels: {
         formatter: function (value) {
-          return "$" + value + "k";
+          return "₹" + value + "k";
         },
         style: {
           fontSize: "14px",
@@ -4644,7 +4644,7 @@ const useReactApexChart = () => {
     yaxis: {
       labels: {
         formatter: function (value) {
-          return "$" + value + "k";
+          return "₹" + value + "k";
         },
         style: {
           fontSize: "14px",
@@ -5060,7 +5060,7 @@ const useReactApexChart = () => {
     yaxis: {
       labels: {
         formatter: function (value) {
-          return "$" + value + "k";
+          return "₹" + value + "k";
         },
         style: {
           fontSize: "14px",
@@ -5194,7 +5194,7 @@ const useReactApexChart = () => {
     yaxis: {
       labels: {
         formatter: function (value) {
-          return "$" + value + "k";
+          return "₹" + value + "k";
         },
         style: {
           fontSize: "14px",
