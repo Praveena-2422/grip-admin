@@ -379,6 +379,48 @@ const MasterLayout = ({ children }) => {
 
 
 
+                        {/* Invoice Dropdown */}
+            <li className='dropdown'>
+              <Link to='#'>
+                 <Icon icon='fe:vector' className='menu-icon' />
+                <span>Enquiry Management</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/enquiries'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+<Icon icon="mdi:account-details-outline" className="menu-icon" />
+
+
+                   Enquiries
+                  </NavLink>
+                </li>
+                {/* <li>
+                  <NavLink
+                     to='/members-grid'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+<Icon icon="mdi:badge-account-outline" className="menu-icon" />
+
+                 Members Profile
+                  </NavLink>
+                </li> */}
+
+
+              </ul>
+            </li>
+
+
+
+
+
+
 
           </ul>
         </div>
@@ -666,9 +708,9 @@ const MasterLayout = ({ children }) => {
 
         {/* Footer section */}
         <footer className='d-footer'>
-          <div className='row align-items-center justify-content-between'>
+          <div className='row '>
             <div className='colauto'>
-              <p className='mb-0'>© 2025 GRIP. All Rights Reserved.</p>
+              <p className='mb-0 text-center'>© 2025 GRIP. All Rights Reserved.</p>
             </div>
 
           </div>

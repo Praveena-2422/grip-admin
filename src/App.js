@@ -115,6 +115,7 @@ import ReferralOverallpage from "./pages/ReferralOverallPage";
 import ThankyouOverallPage from "./pages/ThankyouOverallPage";
 import TestimonialOverallPage from "./pages/TestimonialOverallPage";
 import VisitorOverallpage from "./pages/VisitorOverallpage";
+import EnquiryListPage from "./pages/EnquiryListPage";
 
 function App() {
   return (
@@ -155,6 +156,9 @@ function App() {
            <Route exact path='/121-list' element={<OnetoOnePage />} />
 
             <Route exact path='/referral' element={<ReferralOverallpage />} />
+
+
+            <Route exact path='/enquiries' element={<EnquiryListPage />} />
 
 
                 <Route exact path='/thankyou' element={<ThankyouOverallPage />} />
