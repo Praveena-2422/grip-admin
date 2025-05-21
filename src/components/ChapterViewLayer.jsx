@@ -63,12 +63,12 @@ const ChapterViewLayer = () => {
   const gripChapters = [
     {
       id: 1,
-      name: "Biz Given",
-      memberCount: 39,
+      name: "Thank you Slip",
+      memberCount: "₹89,00,000",
       members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 16 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 10 },
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: "₹75,00,000" },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: "₹4,00,000" },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: "₹10,00,000" },
 
       ]
     },
@@ -452,24 +452,19 @@ const ChapterViewLayer = () => {
 
           <div className='row gy-4'>
             {gripChapters.map((chapter) => (
-              <div className="col-xxl-3" key={chapter.id}>
+              <div className="col-xxl-3 col-lg-3 col-sm-12" key={chapter.id}>
                 <div className="card">
-                  <div className="chapterwiseheading d-flex align-items-center flex-wrap gap-2 justify-content-between">
-                    <h6 className="mb-2 fw-bold text-lg mb-0">{chapter.name}  ({chapter.memberCount})</h6>
-                    {/* <Link
-                        to="/chapterone-list"
-                        className="onetoonecount text-primary-600 hover-text-primary d-flex align-items-center gap-1"
-                      >
-                        {chapter.memberCount}
-                        <Icon
-                          icon="solar:alt-arrow-right-linear"
-                          className="icon"
-                        />
-                      </Link> */}
-                  </div>
-                  <div className="card-body">
+                              <div className="chapterwiseheading d-flex text-white align-items-center flex-wrap gap-2 justify-content-between">
+                                    <h6 className="mb-2 fw-bold text-sm mb-0">{chapter.name}</h6>
 
-                    <div className="mt-2">
+                                      {chapter.memberCount}
+
+
+                                  </div>
+
+                  <div className="card-body p-20">
+
+                    <div className="mt-0">
                       {chapter.members.map((member, index) => (
                         <div
                           className={`d-flex align-items-center justify-content-between gap-3 ${index < chapter.members.length - 1 ? 'mb-32' : ''}`}
@@ -479,13 +474,11 @@ const ChapterViewLayer = () => {
                             <img
                               src={`assets/images/users/${member.image}`}
                               alt={member.name}
-                              className="w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden"
+                              className="w-40-px h-40-px rounded-circle flex-shrink-0 me-10 overflow-hidden"
                             />
                             <div className="flex-grow-1">
                               <h6 className="text-md mb-0">{member.name}</h6>
-                              <span className="text-sm text-secondary-light fw-medium">
-                                Member ID: {member.id}
-                              </span>
+
                             </div>
                           </div>
                           <span className="text-primary-light text-md fw-medium">{member.score}</span>

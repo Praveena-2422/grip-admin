@@ -9,13 +9,12 @@ const ReferralOverallLayer = () => {
       id: 1,
       name: "GRIP Aram",
       memberCount: 80,
-      members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
-        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
-         { id: 36258, name: "Aravind", image: "user5.png", score: 13 },
-
+     members: [
+        { id: "Developer", name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: "Architect", name: "Kesavan", image: "user2.png", score: 13 },
+        { id: "Photographer", name: "Vignesh", image: "user3.png", score: 16 },
+        { id: "Advocate", name: "Kannan", image: "user4.png", score: 13 },
+          { id: "Managing Director", name: "Aravind", image: "user5.png", score: 13 },
 
       ]
     },
@@ -23,13 +22,12 @@ const ReferralOverallLayer = () => {
       id: 2,
       name: "GRIP Virutcham",
       memberCount: 75,
-      members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
-        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
-         { id: 36258, name: "Aravind", image: "user5.png", score: 13 },
-
+     members: [
+        { id: "Developer", name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: "Architect", name: "Kesavan", image: "user2.png", score: 13 },
+        { id: "Photographer", name: "Vignesh", image: "user3.png", score: 16 },
+        { id: "Advocate", name: "Kannan", image: "user4.png", score: 13 },
+          { id: "Managing Director", name: "Aravind", image: "user5.png", score: 13 },
 
       ]
     },
@@ -37,13 +35,12 @@ const ReferralOverallLayer = () => {
       id: 3,
       name: "GRIP Madhuram",
       memberCount: 60,
-      members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
-        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
-         { id: 36258, name: "Aravind", image: "user5.png", score: 13 },
-
+     members: [
+        { id: "Developer", name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: "Architect", name: "Kesavan", image: "user2.png", score: 13 },
+        { id: "Photographer", name: "Vignesh", image: "user3.png", score: 16 },
+        { id: "Advocate", name: "Kannan", image: "user4.png", score: 13 },
+          { id: "Managing Director", name: "Aravind", image: "user5.png", score: 13 },
 
       ]
     },
@@ -52,12 +49,11 @@ const ReferralOverallLayer = () => {
       name: "GRIP Kireedam",
       memberCount: 90,
       members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
-        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
-         { id: 36258, name: "Aravind", image: "user5.png", score: 13 },
-
+        { id: "Developer", name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: "Architect", name: "Kesavan", image: "user2.png", score: 13 },
+        { id: "Photographer", name: "Vignesh", image: "user3.png", score: 16 },
+        { id: "Advocate", name: "Kannan", image: "user4.png", score: 13 },
+          { id: "Managing Director", name: "Aravind", image: "user5.png", score: 13 },
 
       ]
     },
@@ -66,12 +62,11 @@ const ReferralOverallLayer = () => {
       name: "GRIP Amudham",
       memberCount: 70,
       members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
-        { id: 36257, name: "Kannan", image: "user4.png", score: 13 },
-         { id: 36258, name: "Aravind", image: "user5.png", score: 13 },
-
+        { id: "Developer", name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: "Architect", name: "Kesavan", image: "user2.png", score: 13 },
+        { id: "Photographer", name: "Vignesh", image: "user3.png", score: 16 },
+        { id: "Advocate", name: "Kannan", image: "user4.png", score: 13 },
+          { id: "Managing Director", name: "Aravind", image: "user5.png", score: 13 },
 
       ]
     }
@@ -158,7 +153,7 @@ const ReferralOverallLayer = () => {
                             <div className="flex-grow-1">
                               <h6 className="text-md mb-0">{member.name}</h6>
                               <span className="text-sm text-secondary-light fw-medium">
-                                Member ID: {member.id}
+                                 {member.id}
                               </span>
                             </div>
                           </div>

@@ -27,18 +27,18 @@ const PrimaryMemberListLayer = () => {
   return (
     <div className="card h-100 p-0 radius-12">
       <div className="card-header border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
-     <div className="d-flex align-items-center flex-wrap gap-3">
-                    <form className="navbar-search">
-                        <input
-                            type="text"
-                            className="bg-base h-40-px w-auto"
-                            name="search"
-                            placeholder="Search"
-                        />
-                        <Icon icon="ion:search-outline" className="icon" />
-                    </form>
+        <div className="d-flex align-items-center flex-wrap gap-3">
+          <form className="navbar-search">
+            <input
+              type="text"
+              className="bg-base h-40-px w-auto"
+              name="search"
+              placeholder="Search"
+            />
+            <Icon icon="ion:search-outline" className="icon" />
+          </form>
 
-                        {/* <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
+          {/* <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
                             <option value="Select Number" disabled>
                                 Select Chapter
                             </option>
@@ -62,7 +62,7 @@ const PrimaryMemberListLayer = () => {
 
                         </select> */}
 
-                </div>
+        </div>
         <Link to="/add-primarymember" className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2">
           <Icon icon="ic:baseline-plus" className="icon text-xl line-height-1" />
           Add New
@@ -93,34 +93,18 @@ const PrimaryMemberListLayer = () => {
                   <td>{member.phone}</td>
                   <td >
                     <select
-                      className="form-select form-select-sm w-auto radius-12 h-40-px"
-                      style={{
-                        backgroundColor:
-                          member.status === 'Activate'
-                            ? '#d1e7dd'
-                            : member.status === 'Decline'
-                              ? '#f8d7da'
-                              : 'white',
-                        color:
-                          member.status === 'Activate'
-                            ? '#0f5132'
-                            : member.status === 'Decline'
-                              ? '#842029'
-                              : 'inherit',
-
-                        border:
-                          member.status === 'Activate'
-                            ? '1px solid #badbcc'
-                            : member.status === 'Decline'
-                              ? '1px solid #f5c2c7'
-                              : '',
-                        appearance: (member.status === 'Activate' || member.status === 'Decline') ? 'none' : 'auto',
-                        backgroundImage: (member.status === 'Activate' || member.status === 'Decline') ? 'none' : undefined,
-                      }}
+                      className={`form-select newonee form-select-sm w-auto radius-12 h-40-px custom-status-select ${member.status === 'Activate'
+                          ? 'status-activate'
+                          : member.status === 'Decline'
+                            ? 'status-decline'
+                            : ''
+                        }`}
                       value={member.status || 'Select Status'}
                       onChange={(e) => handleStatusChange(index, e.target.value)}
                     >
-                      <option value="Select Status" disabled> Status</option>
+                      <option value="Select Status" disabled>
+                        Select Status
+                      </option>
                       <option value="Activate">Activate</option>
                       <option value="Decline">Decline</option>
                     </select>

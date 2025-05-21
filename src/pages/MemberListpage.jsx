@@ -13,7 +13,7 @@ const MemberListPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        <Breadcrumb title="Members List" name="Member" />
+        <Breadcrumb title="Associators" name="Associate" />
 
         {/* UsersListLayer */}
         <MemberListLayer />

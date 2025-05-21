@@ -343,7 +343,7 @@ const MasterLayout = ({ children }) => {
             <li className='dropdown'>
               <Link to='#'>
                 <Icon icon='fe:vector' className='menu-icon' />
-                <span>Members</span>
+                <span>Associate</span>
               </Link>
               <ul className='sidebar-submenu'>
                 <li>
@@ -356,7 +356,7 @@ const MasterLayout = ({ children }) => {
                     <Icon icon="mdi:account-details-outline" className="menu-icon" />
 
 
-                    Members
+                    Associators
                   </NavLink>
                 </li>
                 {/* <li>

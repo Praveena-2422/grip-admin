@@ -125,7 +125,7 @@ const ChapterWiseLayer = () => {
                  <div className="chapterwiseheading d-flex text-white align-items-center flex-wrap gap-2 justify-content-between">
                                     <h6 className="mb-2 fw-bold text-lg mb-0">{chapter.name}</h6>
 
-                                     ( {chapter.memberCount} )
+                                      {chapter.memberCount}
 
 
                                   </div>

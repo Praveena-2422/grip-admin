@@ -3,32 +3,32 @@ import React from "react";
 const SourceVisitors = () => {
   const visitorSources = [
     {
-      label: "Online",
+      label: "Email",
       percentage: 28,
-      icon: "assets/images/home-nine/source-icon1.png",
+      icon: "assets/images/home-nine/source-icon6.png",
+      bgClass: "bg-tb-email",
+      iconBgClass: "bg-email-600",
+    },
+    {
+      label: "Whatsapp",
+      percentage: 45,
+      icon: "assets/images/home-nine/source-icon7.png",
+      bgClass: "bg-tb-success",
+      iconBgClass: "bg-success-600",
+    },
+    {
+      label: "Website",
+      percentage: 55,
+      icon: "assets/images/home-nine/source-icon4.png",
+      bgClass: "bg-tb-website",
+      iconBgClass: "bg-website-600",
+    },
+    {
+      label: "Friends",
+      percentage: 68,
+      icon: "assets/images/home-nine/source-icon5.png",
       bgClass: "bg-tb-warning",
       iconBgClass: "bg-warning-600",
-    },
-    {
-      label: "Instagram",
-      percentage: 45,
-      icon: "assets/images/home-nine/source-icon2.png",
-      bgClass: "bg-tb-lilac",
-      iconBgClass: "bg-lilac-600",
-    },
-    {
-      label: "Facebook",
-      percentage: 55,
-      icon: "assets/images/home-nine/source-icon3.png",
-      bgClass: "bg-tb-primary",
-      iconBgClass: "bg-primary-600",
-    },
-    {
-      label: "Facebook",
-      percentage: 68,
-      icon: "assets/images/home-nine/source-icon3.png",
-      bgClass: "bg-tb-primary",
-      iconBgClass: "bg-primary-600",
     },
     {
       label: "Facebook",
@@ -38,11 +38,11 @@ const SourceVisitors = () => {
       iconBgClass: "bg-primary-600",
     },
     {
-      label: "Website",
+      label: "Instagram",
       percentage: 90,
-      icon: "assets/images/home-nine/source-icon4.png",
-      bgClass: "bg-tb-success",
-      iconBgClass: "bg-success-600",
+      icon: "assets/images/home-nine/source-icon2.png",
+      bgClass: "bg-tb-lilac",
+      iconBgClass: "bg-lilac-600",
     },
   ];
 

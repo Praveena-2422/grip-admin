@@ -1,8 +1,28 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CreatableSelect from "react-select/creatable";
 
 const RoleAccessLayer = () => {
+
+
+  const [options, setOptions] = useState([
+    { value: "Chennai", label: "Chennai" },
+
+  ]);
+
+  const [selectedOption, setSelectedOption] = useState(null);
+
+  const handleChange = (newValue, actionMeta) => {
+    setSelectedOption(newValue);
+  };
+
+  const handleCreate = (inputValue) => {
+    const newOption = { value: inputValue, label: inputValue };
+    setOptions((prev) => [...prev, newOption]);
+    setSelectedOption(newOption);
+  };
+
 
 
   return (
@@ -10,52 +30,52 @@ const RoleAccessLayer = () => {
 
 
 
-   <div className="card-header mb-3 border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
-          <div className="d-flex align-items-center flex-wrap gap-3">
-            <form className="navbar-search">
-              <input
-                type="text"
-                className="bg-base h-40-px w-auto"
-                name="search"
-                placeholder="Search"
-              />
-              <Icon icon="ion:search-outline" className="icon" />
-            </form>
+      <div className="card-header mb-3 border-bottom bg-base py-16 px-24 d-flex align-items-center flex-wrap gap-3 justify-content-between">
+        <div className="d-flex align-items-center flex-wrap gap-3">
+          <form className="navbar-search">
+            <input
+              type="text"
+              className="bg-base h-40-px w-auto"
+              name="search"
+              placeholder="Search"
+            />
+            <Icon icon="ion:search-outline" className="icon" />
+          </form>
 
 
 
-          </div>
-
-          <div className="d-flex align-items-center flex-wrap gap-1">
-
-            <button
-              type="button"
-              className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModalTwo"
-            >
-              <Icon
-                icon="ic:baseline-plus"
-                className="icon text-xl line-height-1"
-              />
-              Add Region
-            </button>
-
-
-            <button
-              type="button"
-              className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <Icon
-                icon="ic:baseline-plus"
-                className="icon text-xl line-height-1"
-              />
-              Add New
-            </button>
-          </div>
         </div>
+
+        <div className="d-flex align-items-center flex-wrap gap-1">
+
+          <button
+            type="button"
+            className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModalTwo"
+          >
+            <Icon
+              icon="ic:baseline-plus"
+              className="icon text-xl line-height-1"
+            />
+            Add Zone
+          </button>
+
+
+          <button
+            type="button"
+            className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            <Icon
+              icon="ic:baseline-plus"
+              className="icon text-xl line-height-1"
+            />
+            Add New
+          </button>
+        </div>
+      </div>
 
 
 
@@ -90,7 +110,7 @@ const RoleAccessLayer = () => {
                       <td style={{ padding: '8px 0' }}>Tuesday</td>
                     </tr>
                     <tr>
-                      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                      <td style={{ padding: '8px 0' }}><strong>Zone:</strong></td>
                       <td style={{ padding: '8px 0' }}>Chennai</td>
                     </tr>
                     <tr>
@@ -152,7 +172,7 @@ const RoleAccessLayer = () => {
                       <td style={{ padding: '8px 0' }}>Wednesday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                      <td style={{ padding: '8px 0' }}><strong>Zone:</strong></td>
                       <td style={{ padding: '8px 0' }}>Chennai</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
@@ -222,7 +242,7 @@ const RoleAccessLayer = () => {
                       <td style={{ padding: '8px 0' }}>Thursday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                      <td style={{ padding: '8px 0' }}><strong>Zone:</strong></td>
                       <td style={{ padding: '8px 0' }}>Chennai</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
@@ -292,7 +312,7 @@ const RoleAccessLayer = () => {
                       <td style={{ padding: '8px 0' }}>Friday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                      <td style={{ padding: '8px 0' }}><strong>Zone:</strong></td>
                       <td style={{ padding: '8px 0' }}>Chennai</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
@@ -364,7 +384,7 @@ const RoleAccessLayer = () => {
                       <td style={{ padding: '8px 0' }}>Saturday</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                      <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                      <td style={{ padding: '8px 0' }}><strong>Zone:</strong></td>
                       <td style={{ padding: '8px 0' }}>Chennai</td>
                     </tr>
                     <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
@@ -452,20 +472,25 @@ const RoleAccessLayer = () => {
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
                       Chapter Name
                     </label>
-                    <input
-                      type="text"
-                      className="form-control radius-8"
+                    <select class="form-control form-select">
+                      <option value="Date">Select Chapter</option>
+                      <option value="1" selected="">GRIP Aram</option>
+                      <option value="1" selected="">GRIP Virutcham</option>
+                       <option value="1" selected="">GRIP Madhuram</option>
+                      <option value="1" selected="">GRIP Kireedam</option>
 
-                    />
+
+                    </select>
+
                   </div>
 
 
                   <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                      Region
+                      Zone
                     </label>
                     <select class="form-control form-select">
-                      <option value="Date">Select Region </option>
+                      <option value="Date">Select Zone </option>
                       <option value="1" selected="">Chennai</option>
                     </select>
                   </div>
@@ -492,7 +517,7 @@ const RoleAccessLayer = () => {
 
                   <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                    Location
+                      Location
                     </label>
                     <input
                       type="text"
@@ -542,7 +567,7 @@ const RoleAccessLayer = () => {
           <div className="modal-content radius-16 bg-base">
             <div className="modal-header py-16 px-24 border border-top-0 border-start-0 border-end-0">
               <h1 className="modal-title fs-5" id="exampleModalLabel">
-                Add New Region
+                Add New Zone
               </h1>
               <button
                 type="button"
@@ -556,34 +581,61 @@ const RoleAccessLayer = () => {
                 <div className="row">
                   <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                      Region Name
+                      Zone Name
                     </label>
-                    <input
-                      type="text"
-                      className="form-control radius-8"
-
+                    <CreatableSelect
+                      classNamePrefix="react-select"
+                      options={options}
+                      value={selectedOption}
+                      onChange={handleChange}
+                      onCreateOption={handleCreate}
+                      placeholder="Select or create Zone"
                     />
                   </div>
 
 
-                  <div className="col-12 mb-20">
-                    <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                      Date
-                    </label>
-                    <input
-                      type="date"
-                      className="form-control radius-8"
 
-                    />
+                  <div className="col-12 mb-20">
+                    <label className="form-label fw-semibold text-primary-light text-sm mb-8">Date of Birth:</label>
+                    <div className="d-flex gap-2">
+                      {/* Day Dropdown */}
+                      <select name="dob-day" className="form-control form-select">
+                        <option value="">Day</option>
+                        {[...Array(31)].map((_, i) => (
+                          <option key={i + 1} value={i + 1}>{i + 1}</option>
+                        ))}
+                      </select>
+
+                      {/* Month Dropdown */}
+                      <select name="dob-month" className="form-control form-select">
+                        <option value="">Month</option>
+                        {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
+                          <option key={i + 1} value={i + 1}>{month}</option>
+                        ))}
+                      </select>
+
+                      {/* Year Dropdown */}
+                      <select name="dob-year" className="form-control form-select">
+                        <option value="">Year</option>
+                        {Array.from({ length: 100 }, (_, i) => {
+                          const year = new Date().getFullYear() - i;
+                          return <option key={year} value={year}>{year}</option>;
+                        })}
+                      </select>
+                    </div>
                   </div>
 
 
+
+
+
+
                   <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                      Region Head
+                      Zone Head
                     </label>
                     <select class="form-control form-select">
-                      <option value="Date">Select Region Head</option>
+                      <option value="Date">Select Zone Head</option>
                       <option value="1" selected="">Rajesh</option>
                       <option value="1" selected="">Madhu</option>
                       <option value="1" selected="">Prabhu</option>
@@ -652,7 +704,7 @@ const RoleAccessLayer = () => {
                     </td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>
-                    <td style={{ padding: '8px 0' }}><strong>Region:</strong></td>
+                    <td style={{ padding: '8px 0' }}><strong>Zone:</strong></td>
                     <td style={{ padding: '8px 0' }}>Chennai</td>
                   </tr>
                   <tr style={{ borderBottom: '1px solid #eee', padding: '8px 0' }}>

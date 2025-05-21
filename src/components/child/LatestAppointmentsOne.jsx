@@ -57,8 +57,8 @@ const LatestAppointmentsOne = () => {
                 <tr>
                   <td>2.</td>
                   <td>Kesavan </td>
-                  <td>Photographer</td>
-                  <td>K7 Studios</td>
+                  <td>Advocate </td>
+                  <td>High Court</td>
                   <td>
                   GRIP Madhuram (Thursday)
                   </td>
@@ -68,6 +68,34 @@ const LatestAppointmentsOne = () => {
                   <td>Vignesh</td>
                   <td>Digital Marketing</td>
                   <td>Iriscoders</td>
+                  <td>
+                    {/* {" "}
+                    <span className='bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm'>
+                      Completed
+                    </span> */}
+                   GRIP Virutcham (Wednesday)
+                  </td>
+                </tr>
+
+                      <tr>
+                  <td>4.</td>
+                  <td>Kalai</td>
+                  <td>Designer</td>
+                  <td>Iriscoders</td>
+                  <td>
+                    {/* {" "}
+                    <span className='bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm'>
+                      Completed
+                    </span> */}
+                   GRIP Virutcham (Wednesday)
+                  </td>
+                </tr>
+
+                      <tr>
+                  <td>5.</td>
+                  <td>Deepak</td>
+                  <td>Photographer</td>
+                  <td>K7 Studios</td>
                   <td>
                     {/* {" "}
                     <span className='bg-success-focus text-success-main px-10 py-4 radius-8 fw-medium text-sm'>

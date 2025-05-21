@@ -117,24 +117,7 @@ const TopPerformanceTwo = () => {
             </div>
 
 
-                  <div className='d-flex align-items-center justify-content-between gap-3'>
-              <div className='d-flex align-items-center'>
-                <img
-                  src='assets/images/home-eight/doctor-img2.png'
-                  alt=''
-                  className='w-40-px h-40-px rounded-circle flex-shrink-0 me-12 overflow-hidden'
-                />
-                <div className='flex-grow-1'>
-                  <h6 className='text-md mb-0'>Kesavan</h6>
-                  <span className='text-sm text-secondary-light fw-medium'>
-                    Media
-                  </span>
-                </div>
-              </div>
-              <span className=' px-10 py-4 radius-8 fw-medium text-sm'>
-                Social Media
-              </span>
-            </div>
+
 
 
           </div>
