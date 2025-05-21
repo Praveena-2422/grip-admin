@@ -64,44 +64,44 @@ const ChapterViewLayer = () => {
     {
       id: 1,
       name: "Biz Given",
-      memberCount: 80,
+      memberCount: 39,
       members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 16 },
         { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 10 },
 
       ]
     },
     {
       id: 2,
       name: "121's",
-      memberCount: 75,
+      memberCount: 46,
       members: [
-        { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36254, name: "ElanKathir", image: "user1.png", score: 18 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 15 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 13 },
 
       ]
     },
     {
       id: 3,
       name: "RFL's",
-      memberCount: 60,
+      memberCount: 38,
       members: [
         { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
         { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 10 },
 
       ]
     },
     {
       id: 4,
       name: "Visitor's",
-      memberCount: 90,
+      memberCount: 37,
       members: [
         { id: 36254, name: "ElanKathir", image: "user1.png", score: 15 },
-        { id: 36255, name: "Kesavan", image: "user2.png", score: 13 },
-        { id: 36256, name: "Vignesh", image: "user3.png", score: 16 },
+        { id: 36255, name: "Kesavan", image: "user2.png", score: 12 },
+        { id: 36256, name: "Vignesh", image: "user3.png", score: 10 },
 
       ]
     },
