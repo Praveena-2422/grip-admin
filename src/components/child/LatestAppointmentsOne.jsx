@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const LatestAppointmentsOne = () => {
   return (
-    <div className='col-xxl-12'>
+    <div className='col-xxl-8'>
       <div className='card h-100'>
         <div className='card-header border-bottom bg-base py-16 px-24 d-flex align-items-center justify-content-between'>
           <h6 className='text-lg fw-semibold mb-0'>Recent Member's</h6>

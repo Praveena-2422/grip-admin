@@ -74,7 +74,7 @@ const RoleAccessLayer = () => {
           <div className='row gy-4'>
 
             {/* Style Two */}
-            <div className='col-xxl-4 col-lg-4 col-sm-6 mb-0'>
+            <div className='col-12 col-xxl-4 col-lg-4 col-sm-6 mb-0'>
               <div className="folded">
                 <h2>GRIP Aram</h2>
               </div>
@@ -136,7 +136,7 @@ const RoleAccessLayer = () => {
             </div>
 
 
-            <div className='col-xxl-4 col-lg-4 col-sm-6'>
+            <div className='col-12 col-xxl-4 col-lg-4 col-sm-6'>
               <div className="folded">
                 <h2>GRIP Virutcham</h2>
               </div>
@@ -206,7 +206,7 @@ const RoleAccessLayer = () => {
               </div>
 
             </div>
-            <div className='col-xxl-4 col-lg-4 col-sm-6'>
+            <div className='col-12 col-xxl-4 col-lg-4 col-sm-6'>
               <div className="folded">
                 <h2>GRIP Madhuram</h2>
               </div>
@@ -276,7 +276,7 @@ const RoleAccessLayer = () => {
               </div>
 
             </div>
-            <div className='col-xxl-4 col-lg-4 col-sm-6'>
+            <div className='col-12 col-xxl-4 col-lg-4 col-sm-6'>
               <div className="folded">
                 <h2>GRIP Kireedam</h2>
               </div>
@@ -348,7 +348,7 @@ const RoleAccessLayer = () => {
             </div>
 
 
-            <div className='col-xxl-4 col-lg-4 col-sm-6'>
+            <div className='col-12 col-xxl-4 col-lg-4 col-sm-6'>
               <div className="folded">
                 <h2>GRIP Amudham</h2>
               </div>
@@ -492,7 +492,7 @@ const RoleAccessLayer = () => {
 
                   <div className="col-12 mb-20">
                     <label className="form-label fw-semibold text-primary-light text-sm mb-8">
-                      Address
+                    Location
                     </label>
                     <input
                       type="text"

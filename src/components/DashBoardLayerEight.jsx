@@ -6,8 +6,10 @@ import PatientVisitByGender from "./child/PatientVisitByGender";
 import TopPerformanceTwo from "./child/TopPerformanceTwo";
 import LatestAppointmentsOne from "./child/LatestAppointmentsOne";
 import TotalIncome from "./child/TotalIncome";
+import ExpenseStatistics from "./child/ExpenseStatistics";
 import AvailableTreatments from "./child/AvailableTreatments";
 import HealthReportsDocument from "./child/HealthReportsDocument";
+import SourceVisitors from "./child/SourceVisitors";
 
 const DashBoardLayerEight = () => {
   return (
@@ -26,11 +28,18 @@ const DashBoardLayerEight = () => {
             {/* PatientVisitByGender */}
             {/* <PatientVisitByGender /> */}
 
+
+
             {/* TopPerformanceTwo */}
-            <TopPerformanceTwo />
+
 
             {/* LatestAppointmentsOne */}
- <TotalIncome />
+
+            <SourceVisitors />
+            <TotalIncome />
+              {/* <ExpenseStatistics /> */}
+
+
 
           </div>
         </div>
@@ -38,7 +47,9 @@ const DashBoardLayerEight = () => {
           <div className='row gy-4'>
             {/* TotalIncome */}
 
-              <LatestAppointmentsOne />
+            <TopPerformanceTwo />
+
+            <LatestAppointmentsOne />
 
             {/* AvailableTreatments */}
             {/* <AvailableTreatments /> */}

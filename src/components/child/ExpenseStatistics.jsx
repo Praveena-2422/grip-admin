@@ -6,7 +6,7 @@ const ExpenseStatistics = () => {
   let { expenseStatisticsOptions, expenseStatisticsSeries } =
     useReactApexChart();
   return (
-    <div className='col-md-6'>
+    <div className='col-md-4'>
       <div className='card radius-16 h-100'>
         <div className='card-header'>
           <div className='d-flex align-items-center flex-wrap gap-2 justify-content-between'>
