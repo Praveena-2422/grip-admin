@@ -76,7 +76,7 @@ const RoleAccessLayer = () => {
             {/* Style Two */}
             <div className='col-xxl-4 col-lg-4 col-sm-6 mb-0'>
               <div className="folded">
-                <h2>GRIP Agaram</h2>
+                <h2>GRIP Aram</h2>
               </div>
 
               <div

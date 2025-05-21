@@ -140,45 +140,24 @@ const MemberListLayer = () => {
                   </td>
                   <td>{member.phone}</td>
                   <td className="text-center">
-                    <select
-                      className="form-select form-select-sm w-auto  radius-12 h-40-px"
-                      style={{
-                        backgroundColor:
-                          member.status === 'Activate'
-                            ? '#d1e7dd'
-                            : member.status === 'Decline'
-                              ? '#f8d7da'
-                              : 'white',
-                        color:
-                          member.status === 'Activate'
-                            ? '#0f5132'
-                            : member.status === 'Decline'
-                              ? '#842029'
-                              : 'inherit',
-                        border:
-                          member.status === 'Activate'
-                            ? '1px solid #badbcc'
-                            : member.status === 'Decline'
-                              ? '1px solid #f5c2c7'
-                              : '',
-                        appearance:
-                          member.status === 'Activate' || member.status === 'Decline'
-                            ? 'none'
-                            : 'auto',
-                        backgroundImage:
-                          member.status === 'Activate' || member.status === 'Decline'
-                            ? 'none'
-                            : undefined,
-                      }}
-                      value={member.status || 'Select Status'}
-                      onChange={(e) => handleStatusChange(index, e.target.value)}
-                    >
-                      <option value="Select Status" disabled>
-                        Select Status
-                      </option>
-                      <option value="Activate">Activate</option>
-                      <option value="Decline">Decline</option>
-                    </select>
+                 <select
+  className={`form-select newonee form-select-sm w-auto radius-12 h-40-px custom-status-select ${
+    member.status === 'Activate'
+      ? 'status-activate'
+      : member.status === 'Decline'
+        ? 'status-decline'
+        : ''
+  }`}
+  value={member.status || 'Select Status'}
+  onChange={(e) => handleStatusChange(index, e.target.value)}
+>
+  <option value="Select Status" disabled>
+    Select Status
+  </option>
+  <option value="Activate">Activate</option>
+  <option value="Decline">Decline</option>
+</select>
+
 
 
                   </td>
@@ -279,7 +258,7 @@ const MemberListLayer = () => {
 
 
                 <div class="col-md-6">
-                  <span class="fw-normal text-body">Activated</span>
+                  <span class="fw-normal text-body">Activate</span>
                 </div>
 
 

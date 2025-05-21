@@ -208,7 +208,7 @@ const ChapterViewLayer = () => {
                   </span>
                   <div>
                     <h6 className="fw-bold mb-1">{card.count.toLocaleString()}</h6>
-                    <span className="text-secondary text-md">{card.label}</span>
+                    <span className="text-secondary text-sm">{card.label}</span>
                   </div>
                 </div>
               </div>
