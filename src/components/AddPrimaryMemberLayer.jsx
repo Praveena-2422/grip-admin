@@ -1,12 +1,14 @@
 import { Icon } from '@iconify/react/dist/iconify.js'
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useState } from "react";
 
 const AddPrimaryMemberLayer = () => {
+     const [belongsToOtherOrg, setBelongsToOtherOrg] = useState("");
     return (
 
 
- <div className="col-lg-12">
+        <div className="col-lg-12">
             <div className="card memshipform-grip">
                 <div className="card-header">
                     <h6 className="card-title mb-0">Chapter Information</h6>
@@ -143,11 +145,36 @@ const AddPrimaryMemberLayer = () => {
                         </div>
 
 
-                        <div className="col-4">
-                            <label className="form-label">
-                                Date of Birth  </label>
-                            <input type="date" name="#0" class="form-control" />
+                           <div className="col-4">
+                            <label className="form-label">Date of Birth:</label>
+                            <div className="d-flex gap-2">
+                                {/* Day Dropdown */}
+                                <select name="dob-day" className="form-select">
+                                    <option value="">Day</option>
+                                    {[...Array(31)].map((_, i) => (
+                                        <option key={i + 1} value={i + 1}>{i + 1}</option>
+                                    ))}
+                                </select>
+
+                                {/* Month Dropdown */}
+                                <select name="dob-month" className="form-select">
+                                    <option value="">Month</option>
+                                    {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
+                                        <option key={i + 1} value={i + 1}>{month}</option>
+                                    ))}
+                                </select>
+
+                                {/* Year Dropdown */}
+                                <select name="dob-year" className="form-select">
+                                    <option value="">Year</option>
+                                    {Array.from({ length: 100 }, (_, i) => {
+                                        const year = new Date().getFullYear() - i;
+                                        return <option key={year} value={year}>{year}</option>;
+                                    })}
+                                </select>
+                            </div>
                         </div>
+
 
 
                         <div className="col-12">
@@ -161,21 +188,34 @@ const AddPrimaryMemberLayer = () => {
                         </div>
 
 
-                        <div className="col-6">
-                            <label className="form-label">Do you belong to any other networking
-                                organisations? </label>
-                            <select class="form-control form-select">
-                                <option value="Date">Select  </option>
-                                <option value="yes" selected="">Yes</option>
-                                <option value="no" >No</option>
+                        <div className={belongsToOtherOrg === "yes" ? "col-4" : "col-6"}>
+                            <label className="form-label">
+                                Do you belong to any other networking organisations?
+                            </label>
+                            <select
+                                className="form-select"
+                                value={belongsToOtherOrg}
+                                onChange={(e) => setBelongsToOtherOrg(e.target.value)}
+                            >
+                                <option value="">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                             </select>
-
                         </div>
 
+                        {/* Extra Field (only if "Yes") */}
+                        {belongsToOtherOrg === "yes" && (
+                            <div className="col-4">
+                                <label className="form-label">Please specify the other networking
+                                    organisations</label>
+                                <input type="text" className="form-control" />
+                            </div>
+                        )}
 
-                        <div className="col-6">
+                        {/* Education Field */}
+                        <div className={belongsToOtherOrg === "yes" ? "col-4" : "col-6"}>
                             <label className="form-label">Education</label>
-                            <select class="form-control form-select">
+                            <select className="form-select">
                                 <option value="">Select Education</option>
                                 <option value="High School">High School</option>
                                 <option value="Diploma">Diploma in Business</option>
@@ -185,7 +225,6 @@ const AddPrimaryMemberLayer = () => {
                                 <option value="Entrepreneurship Certificate">Entrepreneurship Certificate</option>
                                 <option value="Others">Others</option>
                             </select>
-
                         </div>
 
                     </div>
@@ -352,7 +391,7 @@ const AddPrimaryMemberLayer = () => {
                         <div className="col-6">
                             <label className="form-label">How many years are you in the business?  </label>
 
-                           <select class="form-control form-select">
+                            <select class="form-control form-select">
                                 <option value="" disabled="" selected="">Select duration</option>
                                 <option value="below_1_year">Below 1 year</option>
                                 <option value="1_5_years">1 to 5 years</option>
@@ -447,7 +486,7 @@ const AddPrimaryMemberLayer = () => {
                             />
                         </div>
 
-{/*
+                        {/*
                         <div className="col-4">
                             <label className="form-label">
                                 Email </label>
@@ -516,52 +555,52 @@ const AddPrimaryMemberLayer = () => {
 
 
 
-                                           <div className="col-12 pb-30">
+                        <div className="col-12 pb-30">
 
-                                               <div class="form-check style-check d-flex align-items-center ">
-                                                   <input class="form-check-input" type="checkbox" id="check1" value="" checked/>
-                                                   <label class="form-check-label" for="check1">
-                                                       I will be able to attend our GRIP weekly meetings on time.</label>
+                            <div class="form-check style-check d-flex align-items-center ">
+                                <input class="form-check-input" type="checkbox" id="check1" value="" checked />
+                                <label class="form-check-label" for="check1">
+                                    I will be able to attend our GRIP weekly meetings on time.</label>
 
-                                               </div>
+                            </div>
 
-                                               <div class="form-check style-check d-flex align-items-center">
-                                                   <input class="form-check-input" type="checkbox" id="check1" value="" checked/>
-                                                   <label class="form-check-label" for="check1">
-                                                       I will be able to bring visitors to this GRIP chapter meetings.</label>
-                                               </div>
-
-
-
-                                               <div class="form-check style-check d-flex align-items-center">
-                                                   <input class="form-check-input" type="checkbox" id="check1" value="" checked/>
-                                                   <label class="form-check-label" for="check1">
-                                                      I will always display a positive attitude.</label>
-                                               </div>
-
-
-                                               <div class="form-check style-check d-flex align-items-center">
-                                                   <input class="form-check-input" type="checkbox" id="check1" value="" checked/>
-                                                   <label class="form-check-label" for="check1">
-                                                      I understand that "Contributors Win"™</label>
-                                               </div>
-
-
-                                               <div class="form-check style-check d-flex align-items-center">
-                                                   <input class="form-check-input" type="checkbox" id="check1" value="" checked/>
-                                                   <label class="form-check-label" for="check1">
-                                                      I will abide by the policies of GRIP.</label>
-                                               </div>
-
-                                                       <div class="form-check style-check d-flex align-items-center">
-                                                   <input class="form-check-input" type="checkbox" id="check1" value="" checked/>
-                                                   <label class="form-check-label" for="check1">
-                                                      I will contribute to the best of my knowledge & ability.</label>
-                                               </div>
+                            <div class="form-check style-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" id="check1" value="" checked />
+                                <label class="form-check-label" for="check1">
+                                    I will be able to bring visitors to this GRIP chapter meetings.</label>
+                            </div>
 
 
 
-                                           </div>
+                            <div class="form-check style-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" id="check1" value="" checked />
+                                <label class="form-check-label" for="check1">
+                                    I will always display a positive attitude.</label>
+                            </div>
+
+
+                            <div class="form-check style-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" id="check1" value="" checked />
+                                <label class="form-check-label" for="check1">
+                                    I understand that "Contributors Win"™</label>
+                            </div>
+
+
+                            <div class="form-check style-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" id="check1" value="" checked />
+                                <label class="form-check-label" for="check1">
+                                    I will abide by the policies of GRIP.</label>
+                            </div>
+
+                            <div class="form-check style-check d-flex align-items-center">
+                                <input class="form-check-input" type="checkbox" id="check1" value="" checked />
+                                <label class="form-check-label" for="check1">
+                                    I will contribute to the best of my knowledge & ability.</label>
+                            </div>
+
+
+
+                        </div>
 
 
 

@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 // import React, { useState } from "react";
 
+
 import { useNavigate } from 'react-router-dom';
 
 
 const MembershipLayer = () => {
+
+    const [networkingOrg, setNetworkingOrg] = useState("");
 
     const navigate = useNavigate();
 
@@ -169,13 +172,13 @@ const MembershipLayer = () => {
 
                                                         <option value=""> Select Name </option>
                                                         <option value="madhu">M Madhu</option>
-                                <option value="rajesh">R Rajesh</option>
-                                <option value="praburajan">E Praburajan</option>
-                                <option value="gajendran">K Gajendran</option>
-                                <option value="kirubakaran">K Kirubakaran</option>
-                                <option value="r anand">R Anand</option>
-                                <option value="Palanikumar">Palanikumar</option>
-                                <option value="balasubramani">BalaSubramani</option>
+                                                        <option value="rajesh">R Rajesh</option>
+                                                        <option value="praburajan">E Praburajan</option>
+                                                        <option value="gajendran">K Gajendran</option>
+                                                        <option value="kirubakaran">K Kirubakaran</option>
+                                                        <option value="r anand">R Anand</option>
+                                                        <option value="Palanikumar">Palanikumar</option>
+                                                        <option value="balasubramani">BalaSubramani</option>
 
                                                     </select>
                                                 </div>
@@ -281,11 +284,38 @@ const MembershipLayer = () => {
                                                 </div>
 
 
-                                                <div className="col-12">
-                                                    <label className="form-label">
-                                                        Date of Birth  </label>
-                                                    <input type="date" name="#0" class="form-control" />
+
+
+                                                <div className="col-4">
+                                                    <label className="form-label">Date of Birth:</label>
+                                                    <div className="d-flex gap-2">
+                                                        {/* Day Dropdown */}
+                                                        <select name="dob-day" className="form-control form-select">
+                                                            <option value="">Day</option>
+                                                            {[...Array(31)].map((_, i) => (
+                                                                <option key={i + 1} value={i + 1}>{i + 1}</option>
+                                                            ))}
+                                                        </select>
+
+                                                        {/* Month Dropdown */}
+                                                        <select name="dob-month" className="form-control form-select">
+                                                            <option value="">Month</option>
+                                                            {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
+                                                                <option key={i + 1} value={i + 1}>{month}</option>
+                                                            ))}
+                                                        </select>
+
+                                                        {/* Year Dropdown */}
+                                                        <select name="dob-year" className="form-control form-select">
+                                                            <option value="">Year</option>
+                                                            {Array.from({ length: 100 }, (_, i) => {
+                                                                const year = new Date().getFullYear() - i;
+                                                                return <option key={year} value={year}>{year}</option>;
+                                                            })}
+                                                        </select>
+                                                    </div>
                                                 </div>
+
 
 
                                                 <div className="col-12">
@@ -299,32 +329,49 @@ const MembershipLayer = () => {
                                                 </div>
 
 
+                                                <div className={networkingOrg === "yes" ? "col-6" : "col-12"}>
+                                                    <label className="form-label">
+                                                        Do you belong to any other networking organisations?
+                                                    </label>
+                                                    <select
+                                                        className="form-select"
+                                                        value={networkingOrg}
+                                                        onChange={(e) => setNetworkingOrg(e.target.value)}
+                                                    >
+                                                        <option value="">Select</option>
+                                                        <option value="yes">Yes</option>
+                                                        <option value="no">No</option>
+                                                    </select>
+                                                </div>
+
+                                                {/* Show this field only when "Yes" is selected */}
+                                                {networkingOrg === "yes" && (
+                                                    <div className="col-6">
+                                                        <label className="form-label">Please specify the other networking
+                                    organisations</label>
+                                                        <input
+                                                            type="text"
+                                                            className="form-control"
+
+                                                        />
+                                                    </div>
+                                                )}
+
+
                                                 <div className="col-12">
-                                                    <label className="form-label">Do you belong to any other networking
-                                                        organisations? </label>
+                                                    <label className="form-label">Education</label>
                                                     <select class="form-control form-select">
-                                                        <option value="Date">Select  </option>
-                                                        <option value="yes" selected="">Yes</option>
-                                                        <option value="no" >No</option>
+                                                        <option value="">Select Education</option>
+                                                        <option value="High School">High School</option>
+                                                        <option value="Diploma">Diploma in Business</option>
+                                                        <option value="Bachelor">Bachelor's Degree</option>
+                                                        <option value="MBA">MBA / Master's in Business</option>
+                                                        <option value="Professional Degree">Professional Degree</option>
+                                                        <option value="Entrepreneurship Certificate">Entrepreneurship Certificate</option>
+                                                        <option value="Others">Others</option>
                                                     </select>
 
                                                 </div>
-
-
-                                                         <div className="col-12">
-                            <label className="form-label">Education</label>
-                            <select class="form-control form-select">
-                                <option value="">Select Education</option>
-                                <option value="High School">High School</option>
-                                <option value="Diploma">Diploma in Business</option>
-                                <option value="Bachelor">Bachelor's Degree</option>
-                                <option value="MBA">MBA / Master's in Business</option>
-                                <option value="Professional Degree">Professional Degree</option>
-                                <option value="Entrepreneurship Certificate">Entrepreneurship Certificate</option>
-                                <option value="Others">Others</option>
-                            </select>
-
-                        </div>
 
                                             </div>
 
@@ -481,18 +528,18 @@ const MembershipLayer = () => {
                                                         defaultValue={""}
                                                     />
                                                 </div>
-                                                 <div className="col-lg-6">
-                            <label className="form-label">How many years are you in the business?  </label>
+                                                <div className="col-lg-6">
+                                                    <label className="form-label">How many years are you in the business?  </label>
 
-                           <select class="form-control form-select">
-                                <option value="" disabled="" selected="">Select duration</option>
-                                <option value="below_1_year">Below 1 year</option>
-                                <option value="1_5_years">1 to 5 years</option>
-                                <option value="6_10_years">6 to 10 years</option>
-                                <option value="11_15_years">11 to 15 years</option>
-                                <option value="above_15_years">Above 15 years</option>
-                            </select>
-                        </div>
+                                                    <select class="form-control form-select">
+                                                        <option value="" disabled="" selected="">Select duration</option>
+                                                        <option value="below_1_year">Below 1 year</option>
+                                                        <option value="1_5_years">1 to 5 years</option>
+                                                        <option value="6_10_years">6 to 10 years</option>
+                                                        <option value="11_15_years">11 to 15 years</option>
+                                                        <option value="above_15_years">Above 15 years</option>
+                                                    </select>
+                                                </div>
 
 
 
@@ -662,7 +709,7 @@ const MembershipLayer = () => {
                                                     className='form-wizard-submit btn btn-primary grip px-32'
                                                     disabled={!allChecked}
                                                 >
-                                                   Submit
+                                                    Submit
                                                 </button>
                                             </div>
                                         </fieldset>
