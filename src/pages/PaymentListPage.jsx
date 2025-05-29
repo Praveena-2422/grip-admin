@@ -13,7 +13,7 @@ const PaymentListPage = () => {
       <MasterLayout>
 
         {/* Breadcrumb */}
-        <Breadcrumb title="Payment List" name="Payments" />
+        <Breadcrumb title="Payment List"  />
 
         {/* UsersListLayer */}
         <PaymentListLayer />

@@ -13,50 +13,50 @@ const initialMembers = [
     name: "Anbu",
     chapter: "GRIP Aram",
     number: "9876543210",
-    purpose: "Monthly meeting fee",
+
     amount: "₹1000",
     transactionNo: "TXN123456",
-    status: "Paid"
+    date: "12 May 2025"
   },
   {
     id: 2,
     name: "Venukumar",
-    chapter: "GRIP Virutcham",
+    chapter: "GRIP Aram",
     number: "8907654345",
-    purpose: "Event Entry",
+
     amount: "₹500",
     transactionNo: "TXN234567",
-    status: "Pending"
+    date: "15 May 2025"
   },
   {
     id: 3,
     name: "Deepika",
-    chapter: "GRIP Madhuram",
+    chapter: "GRIP Aram",
     number: "7890654321",
-    purpose: "Membership Renewal",
+
     amount: "₹2000",
     transactionNo: "TXN345678",
-    status: "Paid"
+    date: "23 May 2025"
   },
   {
     id: 4,
     name: "Vignesh",
-    chapter: "GRIP Kireedam",
+    chapter: "GRIP Aram",
     number: "9854432145",
-    purpose: "Special Contribution",
+
     amount: "₹1500",
     transactionNo: "TXN456789",
-    status: "Failed"
+    date: "25 May 2025"
   },
   {
     id: 5,
     name: "Muthukumar",
-    chapter: "GRIP Amudham",
+    chapter: "GRIP Aram",
     number: "9044321786",
-    purpose: "Charity Support",
+
     amount: "₹3000",
     transactionNo: "TXN567890",
-    status: "Paid"
+    date: "28 may 2025"
   }
 ];
 
@@ -101,14 +101,15 @@ const TransactionListLayer = () => {
                         <option value="20">GRIP Madhuram</option>
                         <option value="20">GRIP Kireedam</option>
                         <option value="20">GRIP Amudham</option>
+                         <option value="20">All</option>
 
                     </select>
 
                     <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
                         <option value="Select Number" >
-                            This Week
+                           Today
                         </option>
-                        <option value="10">This Month</option>
+                        <option value="10">Yesterday</option>
                         <option value="15">Last Week</option>
                         <option value="20">Last Month</option>
                         <option value="20">This Term</option>
@@ -130,10 +131,10 @@ const TransactionListLayer = () => {
 
                                 <th>Chapter</th>
                                    <th>Number</th>
-                                    <th>Purpose</th>
+
                                     <th>Amount</th>
                                 <th>Transaction No</th>
-                                <th>Status</th>
+                                <th>Date</th>
 
                             </tr>
                         </thead>
@@ -144,21 +145,11 @@ const TransactionListLayer = () => {
       <td>{member.name}</td>
       <td>{member.chapter}</td>
       <td>{member.number}</td>
-      <td>{member.purpose}</td>
+
       <td>{member.amount}</td>
       <td>{member.transactionNo}</td>
       <td>
-        <span
-          className={`badge ${
-            member.status === "Paid"
-              ? "bg-success"
-              : member.status === "Pending"
-              ? "bg-warning text-dark"
-              : "bg-danger"
-          }`}
-        >
-          {member.status}
-        </span>
+       {member.date}
       </td>
     </tr>
   ))}

@@ -40,7 +40,7 @@ const initialMembers = [
         id: 5,
         purpose: "Training",
         amount: "₹300",
-        chapter: "GRIP Amudham",
+        chapter: "All",
         comments: "121 Training"
     }
 ];
@@ -85,14 +85,15 @@ const PaymentListLayer = () => {
                         <option value="20">GRIP Madhuram</option>
                         <option value="20">GRIP Kireedam</option>
                         <option value="20">GRIP Amudham</option>
+                        <option value="20">All</option>
 
                     </select>
 
                     <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
                         <option value="Select Number" >
-                            This Week
+                           Today
                         </option>
-                        <option value="10">This Month</option>
+                        <option value="10">Yesterday</option>
                         <option value="15">Last Week</option>
                         <option value="20">Last Month</option>
                         <option value="20">This Term</option>
@@ -104,7 +105,7 @@ const PaymentListLayer = () => {
                 <Link to="/add-member" className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2" data-bs-toggle="modal"
                     data-bs-target="#exampleModalOne">
                     <Icon icon="ic:baseline-plus" className="icon text-xl line-height-1" />
-                    Make Payment
+                     Payment Creation
                 </Link>
             </div>
 
@@ -154,7 +155,8 @@ const PaymentListLayer = () => {
                                             </button>
                                             <button
                                                 type="button"
-                                                className="bg-success-focus text-success-600 bg-hover-success-200 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle"
+                                                className="bg-success-focus text-success-600 bg-hover-success-200 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle" data-bs-toggle="modal"
+                    data-bs-target="#exampleModalTwo"
                                             >
                                                 <Icon icon="lucide:edit" className="menu-icon" />
                                             </button>
@@ -169,92 +171,7 @@ const PaymentListLayer = () => {
             </div>
 
 
-            {/* Modal Start */}
-            <div
-                className="modal fade"
-                id="exampleModal"
-                tabIndex={-1}
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-            >
-                <div className="modal-dialog modal-m modal-dialog modal-dialog-centered">
-                    <div className="modal-content radius-16 bg-base">
-                        <div className="modal-header py-16 px-24 border border-top-0 border-start-0 border-end-0">
-                            <h1 className="modal-title fs-5" id="exampleModalLabel">
-                                Member Details
-                            </h1>
-                            <button
-                                type="button"
-                                className="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            />
-                        </div>
-                        <div className="modal-body p-24">
-                            <div class="mb-3 row">
-                                <div class="col-md-6">
-                                    <p class="font-size-14 py-2"> Name :</p>
-                                </div>
 
-
-                                <div class="col-md-6">
-                                    <span class="fw-normal text-body">Anbu</span>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <p class="font-size-14 py-2"> Company Name :</p>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <span class="fw-normal text-body">Iriscoders</span>
-                                </div>
-
-
-
-                                <div class="col-md-6">
-                                    <p class="font-size-14 py-2"> Category :</p>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <span class="fw-normal text-body">Website</span>
-                                </div>
-
-
-
-                                <div class="col-md-6">
-                                    <p class="font-size-14 py-2"> Mobile Number :</p>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <span class="fw-normal text-body">98675 12543</span>
-                                </div>
-
-
-
-                                <div class="col-md-6">
-                                    <p class="font-size-14 py-2"> Status :</p>
-                                </div>
-
-
-                                <div class="col-md-6">
-                                    <span class="fw-normal text-body">Activate</span>
-                                </div>
-
-
-
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* Modal End */}
 
 
 
@@ -330,6 +247,113 @@ const PaymentListLayer = () => {
                                         <input
                                             type="text"
                                             className="form-control radius-8"
+
+                                        />
+                                    </div>
+
+
+
+                                    <div className="d-flex align-items-center gap-3 mt-24">
+                                        <button
+                                            type="reset"
+                                            className="border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-40 py-11 radius-8"
+                                        >
+                                            Cancel
+                                        </button>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-primary grip border border-primary-600 text-md px-48 py-12 radius-8"
+                                        >
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div
+                className="modal fade"
+                id="exampleModalTwo"
+                tabIndex={-1}
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div className="modal-dialog modal-m modal-dialog modal-dialog-centered">
+                    <div className="modal-content radius-16 bg-base">
+                        <div className="modal-header py-16 px-24 border border-top-0 border-start-0 border-end-0">
+                            <h1 className="modal-title fs-5" id="exampleModalLabel">
+                                Payment Creation
+                            </h1>
+                            <button
+                                type="button"
+                                className="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                            />
+                        </div>
+                        <div className="modal-body p-24">
+                            <form action="#">
+                                <div className="row">
+
+                                    <div className="col-12 mb-20">
+                                        <label className="form-label fw-semibold text-primary-light text-sm mb-8">
+                                            Purpose
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className="form-control radius-8"
+
+                                         value="Monthly meeting fee"
+
+                                        />
+                                    </div>
+
+
+                                    <div className="col-12 mb-20">
+                                        <label className="form-label fw-semibold text-primary-light text-sm mb-8">
+                                            Amount
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className="form-control radius-8"
+                                            value="1000"
+
+                                        />
+                                    </div>
+                                    <div className="col-12 mb-20">
+                                        <label className="form-label fw-semibold text-primary-light text-sm mb-8">
+                                            Chapter Name
+                                        </label>
+                                        <select class="form-control form-select">
+                                            <option value="Date">Select Chapter</option>
+                                            <option value="1" selected>GRIP Aram</option>
+                                            <option value="1" selected="">GRIP Virutcham</option>
+                                            <option value="1" selected="">GRIP Madhuram</option>
+                                            <option value="1" selected="">GRIP Kireedam</option>
+
+
+                                        </select>
+
+                                    </div>
+
+
+
+
+                                    <div className="col-12 mb-20">
+                                        <label className="form-label fw-semibold text-primary-light text-sm mb-8">
+                                            Comments
+                                        </label>
+                                        <input
+                                            type="text"
+                                            className="form-control radius-8"
+                                            value="Monthly Activity"
 
                                         />
                                     </div>
