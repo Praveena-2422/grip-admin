@@ -116,6 +116,8 @@ import ThankyouOverallPage from "./pages/ThankyouOverallPage";
 import TestimonialOverallPage from "./pages/TestimonialOverallPage";
 import VisitorOverallpage from "./pages/VisitorOverallpage";
 import EnquiryListPage from "./pages/EnquiryListPage";
+import PaymentListPage from "./pages/PaymentListPage";
+import TransactionListPage from "./pages/TransactionListPage";
 
 function App() {
   return (
@@ -143,6 +145,8 @@ function App() {
 
 
           <Route exact path='/referral-list' element={<ReferralListPage />} />
+
+             <Route exact path='/transaction-list' element={<TransactionListPage />} />
 
 
            <Route exact path='/visitors-list' element={<VisitorsListPage />} />
@@ -175,6 +179,9 @@ function App() {
 
 
          <Route exact path='/member-list' element={<MemberListPage />} />
+
+
+          <Route exact path='/payment-list' element={<PaymentListPage />} />
 
            <Route exact path='/primarymember-list' element={<PrimaryMemberListPage />} />
 

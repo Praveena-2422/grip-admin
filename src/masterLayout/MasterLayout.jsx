@@ -420,6 +420,37 @@ const MasterLayout = ({ children }) => {
 
 
 
+            {/* Invoice Dropdown */}
+            <li className='dropdown'>
+              <Link to='#'>
+              <Icon icon="mdi:credit-card-outline" className="menu-icon" />
+                <span>Payments</span>
+              </Link>
+              <ul className='sidebar-submenu'>
+                <li>
+                  <NavLink
+                    to='/payment-list'
+                    className={(navData) =>
+                      navData.isActive ? "active-page" : ""
+                    }
+                  >
+                    <Icon icon="mdi:credit-card-plus-outline" className="menu-icon" />
+
+
+
+                    Payment Creation
+                  </NavLink>
+                </li>
+
+
+
+              </ul>
+            </li>
+
+
+
+
+
 
 
 
@@ -634,7 +665,7 @@ const MasterLayout = ({ children }) => {
                       className='w-40-px h-40-px object-fit-cover rounded-circle'
                     />
                   </button>
-                  <div className='dropdown-menu to-top dropdown-menu-sm'>
+                  <div className='dropdown-menu to-top dropdown-menu-sm custom-dropdown-position'>
                     <div className='py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2'>
                       <div>
                         <h6 className='text-lg text-primary-light fw-semibold mb-2'>
