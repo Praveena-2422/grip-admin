@@ -91,7 +91,7 @@ const PaymentListLayer = () => {
 
                     <select className="form-select form-select-sm w-auto" defaultValue="Select Number">
                         <option value="Select Number" >
-                           Today
+                            Today
                         </option>
                         <option value="10">Yesterday</option>
                         <option value="15">Last Week</option>
@@ -105,7 +105,7 @@ const PaymentListLayer = () => {
                 <Link to="/add-member" className="btn btn-primary grip text-sm btn-sm px-12 py-12 radius-8 d-flex align-items-center gap-2" data-bs-toggle="modal"
                     data-bs-target="#exampleModalOne">
                     <Icon icon="ic:baseline-plus" className="icon text-xl line-height-1" />
-                     Payment Creation
+                    Payment Creation
                 </Link>
             </div>
 
@@ -156,7 +156,7 @@ const PaymentListLayer = () => {
                                             <button
                                                 type="button"
                                                 className="bg-success-focus text-success-600 bg-hover-success-200 fw-medium w-40-px h-40-px d-flex justify-content-center align-items-center rounded-circle" data-bs-toggle="modal"
-                    data-bs-target="#exampleModalTwo"
+                                                data-bs-target="#exampleModalTwo"
                                             >
                                                 <Icon icon="lucide:edit" className="menu-icon" />
                                             </button>
@@ -231,7 +231,7 @@ const PaymentListLayer = () => {
                                             <option value="1" selected="">GRIP Virutcham</option>
                                             <option value="1" selected="">GRIP Madhuram</option>
                                             <option value="1" selected="">GRIP Kireedam</option>
-
+                                            <option value="1" selected="">All</option>
 
                                         </select>
 
@@ -310,7 +310,7 @@ const PaymentListLayer = () => {
                                             type="text"
                                             className="form-control radius-8"
 
-                                         value="Monthly meeting fee"
+                                            value="Monthly meeting fee"
 
                                         />
                                     </div>
@@ -337,6 +337,7 @@ const PaymentListLayer = () => {
                                             <option value="1" selected="">GRIP Virutcham</option>
                                             <option value="1" selected="">GRIP Madhuram</option>
                                             <option value="1" selected="">GRIP Kireedam</option>
+                                            <option value="1" selected="">All</option>
 
 
                                         </select>
