@@ -10,6 +10,7 @@ import { Modal, Button } from 'react-bootstrap';
 const initialMembers = [
     {
         id: 1,
+        date: "10 June 2025",
         purpose: "Monthly meeting fee",
         amount: "₹1000",
         chapter: "GRIP Aram",
@@ -17,6 +18,7 @@ const initialMembers = [
     },
     {
         id: 2,
+        date: "12 June 2025",
         purpose: "Event Fee",
         amount: "₹500",
         chapter: "GRIP Virutcham",
@@ -24,6 +26,7 @@ const initialMembers = [
     },
     {
         id: 3,
+        date: "15 June 2025",
         purpose: "Membership Renewal",
         amount: "₹2000",
         chapter: "GRIP Madhuram",
@@ -31,6 +34,7 @@ const initialMembers = [
     },
     {
         id: 4,
+        date: "18 June 2025",
         purpose: "Special Contribution",
         amount: "₹1500",
         chapter: "GRIP Kireedam",
@@ -38,6 +42,7 @@ const initialMembers = [
     },
     {
         id: 5,
+        date: "22 June 2025",
         purpose: "Training",
         amount: "₹300",
         chapter: "All",
@@ -115,6 +120,7 @@ const PaymentListLayer = () => {
                         <thead>
                             <tr>
                                 <th>S.No</th>
+                                <th>Date</th>
                                 <th>Purpose</th>
                                 <th>Amount</th>
                                 <th>Chapter</th>
@@ -127,6 +133,7 @@ const PaymentListLayer = () => {
                             {members.map((member, index) => (
                                 <tr key={member.id}>
                                     <td>{index + 1}.</td>
+                                    <td>{member.date}</td>
                                     <td>{member.purpose}</td>
                                     <td>{member.amount}</td>
                                     <td>
@@ -209,6 +216,38 @@ const PaymentListLayer = () => {
 
                                         />
                                     </div>
+
+
+                                            <div className="col-12 mb-20">
+                            <label className="form-label fw-semibold text-primary-light text-sm mb-8">Date </label>
+                            <div className="d-flex gap-2">
+                                {/* Day Dropdown */}
+                                <select name="dob-day" className="form-select">
+                                    <option value="">Day</option>
+                                    {[...Array(31)].map((_, i) => (
+                                        <option key={i + 1} value={i + 1}>{i + 1}</option>
+                                    ))}
+                                </select>
+
+                                {/* Month Dropdown */}
+                                <select name="dob-month" className="form-select">
+                                    <option value="">Month</option>
+                                    {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
+                                        <option key={i + 1} value={i + 1}>{month}</option>
+                                    ))}
+                                </select>
+
+                                {/* Year Dropdown */}
+                                <select name="dob-year" className="form-select">
+                                    <option value="">Year</option>
+                                    {Array.from({ length: 100 }, (_, i) => {
+                                        const year = new Date().getFullYear() - i;
+                                        return <option key={year} value={year}>{year}</option>;
+                                    })}
+                                </select>
+                            </div>
+                        </div>
+
 
 
                                     <div className="col-12 mb-20">
@@ -314,6 +353,39 @@ const PaymentListLayer = () => {
 
                                         />
                                     </div>
+
+
+
+                                            <div className="col-12 mb-20">
+                            <label className="form-label fw-semibold text-primary-light text-sm mb-8">Date </label>
+                            <div className="d-flex gap-2">
+                                {/* Day Dropdown */}
+                                <select name="dob-day" className="form-select">
+                                    <option value="">Day</option>
+                                    {[...Array(31)].map((_, i) => (
+                                        <option key={i + 1} value={i + 1}>{i + 1}</option>
+                                    ))}
+                                </select>
+
+                                {/* Month Dropdown */}
+                                <select name="dob-month" className="form-select">
+                                    <option value="">Month</option>
+                                    {["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].map((month, i) => (
+                                        <option key={i + 1} value={i + 1}>{month}</option>
+                                    ))}
+                                </select>
+
+                                {/* Year Dropdown */}
+                                <select name="dob-year" className="form-select">
+                                    <option value="">Year</option>
+                                    {Array.from({ length: 100 }, (_, i) => {
+                                        const year = new Date().getFullYear() - i;
+                                        return <option key={year} value={year}>{year}</option>;
+                                    })}
+                                </select>
+                            </div>
+                        </div>
+
 
 
                                     <div className="col-12 mb-20">
